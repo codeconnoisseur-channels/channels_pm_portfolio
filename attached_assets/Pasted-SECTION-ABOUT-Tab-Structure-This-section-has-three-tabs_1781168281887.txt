@@ -1,0 +1,69 @@
+SECTION: ABOUT
+
+Tab Structure
+
+This section has three tabs: My Story, Philosophy, Services.
+
+
+TAB 1: MY STORY
+
+Section Heading: Meet Channels
+
+Picture Note: A headshot of Channels sits beside this copy on desktop, and above it on mobile. See the headshot note at the end of this document.
+
+Body Copy:
+A Product Manager who builds and ships products that users love and drives revenue for the business.
+
+My technical foundation in backend engineering, where I designed database schemas, built APIs, integrated payment systems, and worked on production applications using Node.js, Express, MongoDB, and PostgreSQL, has shaped how I think about product decisions. I do not see products as just features and outcomes. I see them as systems shaped by architecture, constraints, and trade-offs.
+
+As a Product Manager, I build end-to-end. I conduct user research, define product direction, write PRDs and TRDs, define acceptance criteria, plan roadmaps, prioritize features, and coordinate cross-functional teams to ship.
+
+What sets me apart is how I bridge the gap between product ideas and engineering. When my team and I have a problem to solve, I do not just describe it in a document. I prototype it. I vibe code it into an actual clickable product so designers, developers, and stakeholders can see exactly what we are building before anyone writes a line of production code.
+
+Right now, I am focused on building AI-powered products at the intersection of LLMs, AI Agents, and automation.
+
+
+TAB 2: PHILOSOPHY
+
+Section Heading: How I think about products.
+
+Principle 1
+Title: Products are systems, not feature lists.
+
+Every feature sits on top of a data model, an API contract, and an infrastructure choice that someone made before the sprint planning meeting. I think about products from that level down because the decisions that make features fast or expensive happen in the architecture, not the backlog. That perspective changes how I scope work, how I prioritize, and how I write requirements. When you understand the system underneath the product, your decisions get sharper and your specs stop generating surprises during engineering.
+
+Principle 2
+Title: A clickable prototype is worth a thousand words in a PRD.
+
+By the time a developer picks up a ticket, the design logic should already be resolved. I prototype early, not to skip the specification process but to make it faster and more honest. A prototype forces clarity that documents do not. Stakeholders give better feedback on something they can click. Engineers catch edge cases before they become rework. I vibe code those prototypes so the entire team can see exactly what is being built before anyone writes a line of production code.
+
+Principle 3
+Title: Data shows you the what. Users show you the why.
+
+Metrics can tell you that something is broken. They rarely tell you why. I treat analytics and user research as two instruments that answer two different questions, and I run both. At BorderFlo, a 40% churn rate in Google Analytics pointed me to the drop-off stage. User interviews told me the real reason: the product was asking for trust before it had given any reason to extend it. If I had only looked at the data, I would have redesigned the wrong thing.
+
+Principle 4
+Title: The best product decisions happen closest to the constraints.
+
+Timelines, system architecture, infrastructure costs, engineering trade-offs: these are not obstacles to good product work. They are the conditions that define what good product work actually looks like. A PM who understands constraints does not just advocate for users. They advocate for what is genuinely possible for users, within the reality of what can be shipped, by whom, and by when. That is the version of product management that builds lasting trust with engineering teams and consistently delivers.
+
+
+TAB 3: SERVICES
+
+Section Heading: What I can help with.
+
+Card 1
+Title: Building a product from scratch?
+Copy: I will take it from a blank page to a working product. Before a single line of code is written, I will validate that the problem is real, prototype the experience so every stakeholder can see exactly what is being built, and define the roadmap that gets it shipped. I have done this at solo founder level and at team scale.
+
+Card 2
+Title: Users not converting or retaining?
+Copy: I will figure out why, and I will use both the data and the user to do it. Analytics tools tell me where the drop-off is. User interviews tell me why it is happening. These are two different instruments that need to be run together. I will find the root cause and build the case for fixing it.
+
+Card 3
+Title: Team ships slowly?
+Copy: I will bring the clarity that makes teams move. Clear PRDs. Defined acceptance criteria. A prioritized backlog where everyone knows what is being built and why. I have coordinated teams of 50+ people across engineering, design, QA, and marketing. Strong cross-functional alignment is the fastest path to a reliable ship cadence.
+
+Card 4
+Title: Need a PM who speaks to engineers?
+Copy: I have been an engineer. I have designed database schemas, built APIs, and integrated payment systems into production applications. When I write a spec, I write it with the implementation in mind. When I push back on a timeline, I understand what is actually on the other side of it. I earn engineering trust faster because I have been on their side of the table

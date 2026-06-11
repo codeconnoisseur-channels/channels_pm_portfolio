@@ -1,0 +1,15 @@
+# Ignore archive backups
+*.zip
+*.tar.gz
+*.rar
+
+# Ignore Replit internal files
+.replit
+replit.nix
+.config/
+.pnpm-store/
+node_modules/
+
+# Ignore system/OS files
+.DS_Store
+Thumbs.db
