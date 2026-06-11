@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import { GlowCard } from "@/components/GlowCard";
+
+const ease = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 const caseStudies = [
   { slug: "borderflo",      number: "01", company: "BorderFlo",    type: "PM Internship",       title: "BorderFlo: Diagnosing 40% Churn",              hook: "Found a 40% post-signup churn rate, ran user interviews, and discovered the problem was not what the team assumed." },
@@ -15,7 +18,7 @@ export default function CaseStudiesPage() {
   return (
     <main className="w-full pb-24">
       <section className="py-20 border-b border-border-subtle">
-        <div className="max-w-7xl mx-auto px-8 md:px-12">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="text-accent text-sm font-bold tracking-widest uppercase mb-4">Case Studies</div>
             <h1 className="font-display text-5xl md:text-6xl mb-6">
@@ -29,17 +32,17 @@ export default function CaseStudiesPage() {
       </section>
 
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-8 md:px-12">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {caseStudies.map((cs, i) => (
-              <motion.div
+              <GlowCard
                 key={cs.slug}
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-card rounded-xl border border-border-subtle overflow-hidden flex flex-col group"
+                initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ delay: i * 0.1, duration: 0.7, ease }}
+                className="bg-card rounded-xl border border-border-subtle hover:border-accent/25 overflow-hidden flex flex-col group transition-colors"
               >
-                <div className="h-44 bg-gradient-to-br from-[#111] to-[#1a1a1a] flex items-center p-8 border-b border-border-subtle relative overflow-hidden">
+                <div className="h-44 bg-gradient-to-br from-card to-card-lighter flex items-center p-8 border-b border-border-subtle relative overflow-hidden">
                   <div className="absolute -right-4 -bottom-8 font-display text-8xl text-white/5 font-bold select-none">{cs.number}</div>
                   <div className="relative z-10">
                     <span className="text-accent font-display text-xl">{cs.number}.</span>
@@ -54,7 +57,7 @@ export default function CaseStudiesPage() {
                     View Case Study <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-              </motion.div>
+              </GlowCard>
             ))}
           </div>
         </div>

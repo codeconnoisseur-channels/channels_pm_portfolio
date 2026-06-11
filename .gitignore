@@ -1,15 +1,48 @@
-# Ignore archive backups
-*.zip
-*.tar.gz
-*.rar
+# ── Dependencies ──────────────────────────────────────────────────────────────
+node_modules/
+.pnpm-store/
 
-# Ignore Replit internal files
+# ── Build outputs ─────────────────────────────────────────────────────────────
+dist/
+artifacts/portfolio/dist/
+
+# ── TypeScript cache ──────────────────────────────────────────────────────────
+*.tsbuildinfo
+
+# ── Replit-specific files ─────────────────────────────────────────────────────
+# These are Replit platform files and are not needed for GitHub / Vercel.
 .replit
 replit.nix
+replit.md
+.replitignore
+.npmrc
 .config/
-.pnpm-store/
-node_modules/
+.replit-artifact/
 
-# Ignore system/OS files
+# ── Monorepo packages not part of the portfolio ───────────────────────────────
+# The portfolio lives in artifacts/portfolio/ only.
+# The other artifacts and lib packages are Replit scaffolding.
+artifacts/api-server/
+artifacts/mockup-sandbox/
+lib/
+scripts/
+
+# ── Reference and session files ───────────────────────────────────────────────
+# All files in attached_assets/ were used during development as references.
+# The 4 images actually used by the portfolio have been copied into
+# artifacts/portfolio/src/assets/ and are tracked there instead.
+attached_assets/
+
+# Claude Code session data — personal, not needed in the repo
+.claude/
+
+# ── OS / editor files ─────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+
+# ── Environment variables ─────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example

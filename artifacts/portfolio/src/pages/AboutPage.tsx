@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { useState } from "react";
+import { GlowCard } from "@/components/GlowCard";
+
+const ease = [0.22, 1, 0.36, 1] as [number, number, number, number];
 import headshot from "@assets/Portfolio_shoot_1781129245216.png";
 import { Mail, Phone, MapPin, ArrowRight, Linkedin } from "lucide-react";
 
@@ -53,7 +56,7 @@ export default function AboutPage() {
 
       {/* Page header */}
       <section className="py-20 border-b border-border-subtle">
-        <div className="max-w-7xl mx-auto px-8 md:px-12">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-4">About Me</div>
             <h1 className="font-display text-5xl md:text-6xl">
@@ -64,14 +67,14 @@ export default function AboutPage() {
       </section>
 
       {/* Tabs */}
-      <div className="sticky top-20 z-30 bg-[#0f0f0f]/95 backdrop-blur-sm border-b border-border-subtle">
-        <div className="max-w-7xl mx-auto px-8 md:px-12">
+      <div className="sticky top-16 md:top-20 z-30 bg-background/95 backdrop-blur-sm border-b border-border-subtle">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
           <div className="flex gap-0">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`py-4 px-6 text-sm font-medium border-b-2 transition-all ${
+                className={`py-3 px-4 md:py-4 md:px-6 text-xs md:text-sm font-medium border-b-2 transition-all whitespace-nowrap ${
                   activeTab === tab
                     ? "border-accent text-accent"
                     : "border-transparent text-text-secondary hover:text-foreground"
@@ -87,7 +90,7 @@ export default function AboutPage() {
       {/* ── TAB 1: My Story ── */}
       {activeTab === "My Story" && (
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-8 md:px-12">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
             <div className="flex flex-col md:flex-row gap-16 items-start">
               <motion.div
                 className="md:w-[58%] space-y-6 text-text-secondary leading-relaxed text-lg"
@@ -131,7 +134,7 @@ export default function AboutPage() {
       {/* ── TAB 2: Philosophy ── */}
       {activeTab === "Philosophy" && (
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-8 md:px-12">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="mb-14">
               <h2 className="font-display text-4xl md:text-5xl mb-4">How I think about <span className="text-accent italic">products.</span></h2>
               <p className="text-text-secondary text-lg max-w-2xl">
@@ -141,17 +144,17 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {principles.map((p, i) => (
-                <motion.div
+                <GlowCard
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-card border border-border-subtle rounded-2xl p-8 hover:border-accent/40 transition-colors"
+                  initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{ delay: i * 0.12, duration: 0.7, ease }}
+                  className="bg-card border border-border-subtle hover:border-accent/25 rounded-2xl p-8 transition-colors"
                 >
                   <div className="text-accent font-display text-4xl font-bold mb-4 opacity-30">0{i + 1}</div>
                   <h3 className="font-display text-xl text-foreground mb-4 leading-snug">{p.title}</h3>
                   <p className="text-text-secondary leading-relaxed">{p.body}</p>
-                </motion.div>
+                </GlowCard>
               ))}
             </div>
           </div>
@@ -161,7 +164,7 @@ export default function AboutPage() {
       {/* ── TAB 3: Services ── */}
       {activeTab === "Services" && (
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-8 md:px-12">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="mb-14">
               <h2 className="font-display text-4xl md:text-5xl mb-4">What I can <span className="text-accent italic">help with.</span></h2>
               <p className="text-text-secondary text-lg max-w-2xl">
@@ -171,19 +174,19 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {services.map((s, i) => (
-                <motion.div
+                <GlowCard
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-card border border-border-subtle rounded-2xl p-8 hover:border-accent/40 transition-colors group"
+                  initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{ delay: i * 0.12, duration: 0.7, ease }}
+                  className="bg-card border border-border-subtle hover:border-accent/25 rounded-2xl p-8 transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
                     <span className="text-accent font-bold text-sm">0{i + 1}</span>
                   </div>
                   <h3 className="font-display text-xl text-foreground mb-4 leading-snug">{s.title}</h3>
                   <p className="text-text-secondary leading-relaxed">{s.body}</p>
-                </motion.div>
+                </GlowCard>
               ))}
             </div>
 

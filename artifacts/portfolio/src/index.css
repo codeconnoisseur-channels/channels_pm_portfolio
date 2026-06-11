@@ -20,13 +20,14 @@
 }
 
 :root {
-  --background: #0f0f0f;
-  --foreground: #FFFFFF;
-  --card: #1c1c1c;
-  --card-lighter: #222222;
+  /* Light mode */
+  --background: #F7F5F0;
+  --foreground: #111111;
+  --card: #FFFFFF;
+  --card-lighter: #EDEAE3;
   --accent: #C9A96E;
-  --text-secondary: #888888;
-  --border-subtle: #2a2a2a;
+  --text-secondary: #6B6560;
+  --border-subtle: #E2DDD5;
 
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
@@ -77,3 +78,4 @@
     border-color: var(--accent);
   }
 }
+
