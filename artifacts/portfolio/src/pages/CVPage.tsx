@@ -111,10 +111,10 @@ const certifications = [
 
 const achievements = [
   {
-    title: "HNG Finalist – Product Management Track",
+    title: "HNG i14 Finalist – Product Management Track",
     org: "HNG Tech",
     period: "2026",
-    badges: ["10 Stages Completed", "Won Best in Product Management", "Top 1% of 1,000+ PM Interns"],
+    badges: ["10 Stages Completed", "Won Best in Product Management: Mentors' Choice Award", "Top 1% of 1,000+ PM Interns"],
   },
 ];
 
@@ -308,7 +308,7 @@ export default function CVPage() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.75, ease }}
         >
-          <h2 className="font-display text-2xl text-foreground mb-6">Continuing Education</h2>
+          <h2 className="font-display text-2xl text-foreground mb-6">Certifications</h2>
           <div className="space-y-4">
             {certifications.map((cert, i) => (
               <GlowCard

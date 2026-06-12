@@ -37,6 +37,10 @@ attached_assets/
 # Claude Code session data — personal, not needed in the repo
 .claude/
 
+# ── Local utility scripts (not part of the deployed site) ────────────────────
+generate_og.py
+generate_cv.py
+
 # ── OS / editor files ─────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
