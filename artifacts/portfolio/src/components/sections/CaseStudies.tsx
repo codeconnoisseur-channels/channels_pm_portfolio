@@ -7,8 +7,8 @@ const caseStudies = [
     type: "Product Management Internship",
     context: "Cross-border educational payment startup",
     hook: "Found a 40% post-signup churn rate in Google Analytics, ran user interviews to understand it, and discovered that the problem was not what the team assumed it was.",
-    insight: "Users understood exactly what they needed to do. They were making a rational decision — the effort required to complete verification was not yet worth it, because they had not experienced any product value. The problem was sequencing, not communication.",
-    decision: "Progressive onboarding — restructure the experience so users can explore the product and see its value before identity verification is required. Build commitment before demanding effort.",
+    insight: "Users understood exactly what they needed to do. They were making a rational decision: the effort required to complete verification was not yet worth it, because they had not experienced any product value. The problem was sequencing, not communication.",
+    decision: "Progressive onboarding: restructure the experience so users can explore the product and see its value before identity verification is required. Build commitment before demanding effort.",
     impact: "MVP launched in January 2025. Progressive onboarding shipped and reduced verification abandonment. The product launched on schedule.",
     link: "https://www.borderflo.com/"
   },

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin, Github, Award, BarChart2, Code, Lightbulb, Database, TrendingUp, Cpu, PenTool } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, Award, BarChart2, Code, Lightbulb, Database, TrendingUp, MousePointer2, PenTool, Download } from "lucide-react";
 import { SiFigma, SiJira, SiLinear, SiClickup, SiNotion, SiAsana, SiMiro, SiPostman, SiSwagger, SiGithub, SiAnthropic, SiOpenai, SiGoogle, SiN8N, SiGoogleanalytics, SiPosthog, SiConfluence } from "react-icons/si";
 import { GlowCard } from "@/components/GlowCard";
 
@@ -21,8 +21,8 @@ const experience = [
       "Served as Technical PM Lead coordinating a 53-person cross-functional team (frontend, backend, DevOps, QA) to ship Open Profile from zero to live production in three weeks.",
       "Wrote the complete PRD for four core features with user stories, acceptance criteria, edge cases, and success metrics.",
       "Co-authored the Technical Requirements Document with the backend team, defining system architecture, 15+ API endpoints, PostgreSQL database schemas, and security requirements.",
-      "Wrote all detailed implementation tickets for both the frontend and backend teams — covering expected behavior, edge cases, and acceptance criteria for every task — and managed the full sprint backlog in ClickUp.",
-      "Conducted QA testing across multiple rounds throughout the sprint, verifying feature behavior against specifications across happy paths and edge cases.",
+      "Wrote all detailed implementation tickets for both the frontend and backend teams, covering expected behavior, edge cases, and acceptance criteria for every task, and managed the full sprint backlog in ClickUp.",
+      "Collaborated with the QA team to conduct multiple testing rounds throughout the sprint, including UI/UX testing, functional testing, User Acceptance Testing (UAT), and regression testing, verifying feature behavior against specifications across happy paths and edge cases.",
       "Collaborated with fellow Product Managers, Design, VAs, and Data Analysts across all product workstreams.",
       "Partnered with Marketing on the GTM strategy, leveraging a waitlist, beta group, founder-led outreach, community channels, and existing social media platforms.",
       "Designed user flows that eliminated a three-week rework cycle caused by design-engineering misalignment.",
@@ -84,12 +84,12 @@ const tools: { name: string; icon: React.ElementType; color: string }[] = [
   { name: "Jira",             icon: SiJira,      color: "#0052CC" },
   { name: "Linear",           icon: SiLinear,    color: "#5E6AD2" },
   { name: "ClickUp",          icon: SiClickup,   color: "#7B68EE" },
-  { name: "Notion",           icon: SiNotion,    color: "#FFFFFF" },
+  { name: "Notion",           icon: SiNotion,    color: "var(--foreground)" },
   { name: "Asana",            icon: SiAsana,     color: "#F06A6A" },
   { name: "Miro",             icon: SiMiro,      color: "#FFD02F" },
   { name: "Postman",          icon: SiPostman,   color: "#FF6C37" },
   { name: "Swagger",          icon: SiSwagger,   color: "#85EA2D" },
-  { name: "GitHub",           icon: SiGithub,    color: "#FFFFFF" },
+  { name: "GitHub",           icon: SiGithub,    color: "var(--foreground)" },
   { name: "Claude",           icon: SiAnthropic, color: "#D97757" },
   { name: "ChatGPT",          icon: SiOpenai,    color: "#10A37F" },
   { name: "Gemini",           icon: SiGoogle,          color: "#4285F4" },
@@ -98,7 +98,7 @@ const tools: { name: string; icon: React.ElementType; color: string }[] = [
   { name: "Google Analytics", icon: SiGoogleanalytics, color: "#E37400" },
   { name: "PostHog",          icon: SiPosthog,         color: "#C9A96E" },
   { name: "SQL",              icon: Database,          color: "#60A5FA" },
-  { name: "Cursor",           icon: Cpu,               color: "#FFFFFF" },
+  { name: "Cursor",           icon: MousePointer2,     color: "var(--foreground)" },
   { name: "Confluence",       icon: SiConfluence,      color: "#0052CC" },
   { name: "Whimsical",        icon: PenTool,           color: "#A78BFA" },
 ];
@@ -135,7 +135,7 @@ export default function CVPage() {
           <h1 className="font-display text-5xl md:text-6xl text-foreground mb-2">Channels Okunade Oladapo</h1>
           <p className="text-accent text-xl font-medium mb-1">Technical Product Manager</p>
           <p className="text-text-secondary text-sm mb-6">Lagos State, Nigeria · Available Globally</p>
-          <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-text-secondary">
+          <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-text-secondary mb-6">
             <a href="mailto:channelsokunade@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors min-w-0" data-testid="cv-email">
               <Mail className="w-4 h-4 text-accent shrink-0" />
               <span className="truncate">channelsokunade@gmail.com</span>
@@ -155,6 +155,16 @@ export default function CVPage() {
               <span className="truncate">github.com/codeconnoisseur-channels</span>
             </a>
           </div>
+          <motion.a
+            href="https://drive.google.com/uc?export=download&id=1m5WSfuVq2IfAgh5fVbubAiyXUktcfUB4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-background rounded-full font-semibold text-sm hover:bg-accent/90 transition-colors"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <Download className="w-4 h-4" /> Download CV
+          </motion.a>
         </motion.div>
 
         <div className="h-px bg-border-subtle mb-12" />

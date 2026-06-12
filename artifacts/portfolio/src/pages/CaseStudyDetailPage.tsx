@@ -1,5 +1,6 @@
 import { useParams, Link } from "wouter";
 import { useRef, useEffect, useState } from "react";
+import { usePageTitle } from "@/hooks/use-page-title";
 import { motion, useInView } from "framer-motion";
 import { ExternalLink, FileText, Target, Lightbulb, Zap, BookOpen, BarChart2 } from "lucide-react";
 
@@ -155,7 +156,7 @@ type CaseStudyData = {
 const caseStudies: Record<string, CaseStudyData> = {
   "borderflo": {
     number: "01",
-    title: "BorderFlo — Activation & Onboarding",
+    title: "BorderFlo: Activation & Onboarding",
     company: "BorderFlo",
     type: "PM Internship",
     period: "Nov 2024 – Feb 2025",
@@ -178,7 +179,7 @@ I joined as a Product Management Intern as the team was building toward the MVP 
         label: "The Challenge",
         content: `The team had observed that users were signing up but not completing the onboarding process. Using Google Analytics, I traced the user journey from signup through each onboarding step and identified where volume was dropping off. The data showed a 40% churn rate, concentrated at one specific step: identity verification.
 
-My first instinct — and the instinct of most product teams in this situation — would have been to optimize the verification step itself. Simplify the UI, improve the copy, add tooltips. But I ran user interviews before drawing that conclusion, because the data could only tell me where the problem was. It could not tell me why.`,
+My first instinct (and the instinct of most product teams in this situation) would have been to optimize the verification step itself. Simplify the UI, improve the copy, add tooltips. But I ran user interviews before drawing that conclusion, because the data could only tell me where the problem was. It could not tell me why.`,
       },
       {
         icon: "approach",
@@ -205,8 +206,8 @@ Progressive onboarding was implemented and shipped. It reduced abandonment at th
         label: "What This Demonstrates",
         content: `This case study demonstrates three specific PM capabilities.
 
-• The discipline to not jump to solutions before completing the diagnosis — the easy answer was to optimize the verification step; the right answer required running research first
-• The ability to distinguish between what data shows and what users explain — these are two different instruments and using only one produces an incomplete picture
+• The discipline to not jump to solutions before completing the diagnosis: the easy answer was to optimize the verification step; the right answer required running research first
+• The ability to distinguish between what data shows and what users explain: these are two different instruments and using only one produces an incomplete picture
 • The willingness to recommend the harder, more structurally significant fix when the evidence points to it, rather than the easier, cosmetic one`,
       },
     ],
@@ -215,7 +216,7 @@ Progressive onboarding was implemented and shipped. It reduced abandonment at th
 
   "deliveroo": {
     number: "02",
-    title: "Deliveroo — Group Ordering with Split Payment",
+    title: "Deliveroo: Group Ordering with Split Payment",
     company: "Deliveroo",
     type: "Product Case Study",
     period: "April 2026",
@@ -270,10 +271,10 @@ North Star Metric: Weekly Successful Group Orders (two or more participants, all
 
 • Market analysis and competitive context to size the opportunity
 • User research using Jobs-to-Be-Done framing, grounded in real behavior not abstract use cases
-• Solution design with payment-first thinking — solving the social friction, not just the logistics
+• Solution design with payment-first thinking: solving the social friction, not just the logistics
 • Edge case reasoning with defined resolution paths for all critical failure states
 • Success metric definition across acquisition, financial impact, and retention clusters
-• The payment-upfront decision is not a UX preference — it is a product insight about what actually makes the feature work`,
+• The payment-upfront decision is not a UX preference: it is a product insight about what actually makes the feature work`,
       },
     ],
     links: [
@@ -284,7 +285,7 @@ North Star Metric: Weekly Successful Group Orders (two or more participants, all
 
   "vendsync": {
     number: "03",
-    title: "VendSync — Q3 Roadmap Prioritization",
+    title: "VendSync: Q3 Roadmap Prioritization",
     company: "VendSync",
     type: "Product Case Study",
     period: "May 2026",
@@ -292,8 +293,8 @@ North Star Metric: Weekly Successful Group Orders (two or more participants, all
     stats: [
       { icon: "items",        value: "5 Items",    label: "Competing backlog items totaling 34 pts" },
       { icon: "capacity",     value: "15 Pts",     label: "Engineering capacity ceiling" },
-      { icon: "rice1",        value: "RICE 12.14", label: "Inventory Refactor — selected" },
-      { icon: "rice3",        value: "RICE 0.09",  label: "AI Predictor — deferred to Q1" },
+      { icon: "rice1",        value: "RICE 12.14", label: "Inventory Refactor (selected)" },
+      { icon: "rice3",        value: "RICE 0.09",  label: "AI Predictor (deferred to Q1)" },
       { icon: "stakeholders", value: "3 Memos",    label: "Individual executive communications" },
     ],
     sections: [
@@ -320,11 +321,11 @@ The five items and their advocates:
         label: "Key Decisions",
         content: `## RICE Scores and Selections
 
-Inventory Database Refactor: RICE 12.14. Selected. Reach scored 10 because every transaction on the platform passes through this database — a failure takes the platform down for all users simultaneously. Impact scored 10 because a Black Friday outage is a business-critical event. Confidence 85% because the risk was formally diagnosed by the Lead Engineer.
+Inventory Database Refactor: RICE 12.14. Selected. Reach scored 10 because every transaction on the platform passes through this database, meaning a failure takes the platform down for all users simultaneously. Impact scored 10 because a Black Friday outage is a business-critical event. Confidence 85% because the risk was formally diagnosed by the Lead Engineer.
 
 White Screen Checkout Bug Fix: RICE 8.55. Selected. 12% of checkout-active users experiencing failures, confirmed by 500+ weekly support tickets. Confidence 95% because the bug is identified, reproducible, and scoped.
 
-WhatsApp Checkout Bot: RICE 3.00. Deferred to Q4. 50% Confidence drove this result — engineering could not deliver this integration without defects in the current sprint window.
+WhatsApp Checkout Bot: RICE 3.00. Deferred to Q4. 50% Confidence drove this result: engineering could not deliver this integration without defects in the current sprint window.
 
 Multi-Currency Wallet: RICE 1.80. Deferred to Q4. The enterprise prospect was unsigned. A prospective, unsigned customer cannot be counted in current-sprint reach calculations without undermining the framework.
 
@@ -334,7 +335,7 @@ AI Inventory Predictor: RICE 0.09. Deferred to Q1. No merchant demand signal. No
 
 To the CEO on the AI Inventory Predictor: I reframed the deferral as disciplined validation rather than a broken commitment. The memo proposed specific investor-facing language positioning the item as entering a structured discovery and validation phase in Q3, with a confirmed build slot in Q1.
 
-To the Head of Sales on the Multi-Currency Wallet: I argued that the most consequential threat to the enterprise deal was not a one-quarter delivery delay — it was a Black Friday platform outage occurring while the prospect was evaluating the platform. I committed the Q4 slot in writing, conditional on the Head of Sales delivering a signed letter of intent before the next sprint planning session.
+To the Head of Sales on the Multi-Currency Wallet: I argued that the most consequential threat to the enterprise deal was not a one-quarter delivery delay. It was a Black Friday platform outage occurring while the prospect was evaluating the platform. I committed the Q4 slot in writing, conditional on the Head of Sales delivering a signed letter of intent before the next sprint planning session.
 
 To the Head of Marketing on the WhatsApp Checkout Bot: I showed that routing a projected 20% acquisition surge into a checkout pipeline with a live 12% failure rate would produce negative returns on acquisition spend. Fixing the checkout experience first is not in competition with the acquisition goal. It is a prerequisite for it.`,
       },
@@ -345,7 +346,7 @@ To the Head of Marketing on the WhatsApp Checkout Bot: I showed that routing a p
 
 • The ability to apply a rigorous prioritization framework under conditions of real organizational pressure, with auditable reasoning rather than mere assertions
 • The ability to write executive-level communication that addresses each stakeholder on their own terms, respects the legitimacy of their concern, and makes specific, bounded commitments
-• The understanding that good prioritization work produces arguments, not just lists — and that the governing argument across all three memos was asymmetry of consequence: deferring a commercial item delays an opportunity; a Black Friday outage destroys revenue merchants were actively counting on`,
+• The understanding that good prioritization work produces arguments, not just lists. The governing argument across all three memos was asymmetry of consequence: deferring a commercial item delays an opportunity; a Black Friday outage destroys revenue merchants were actively counting on`,
       },
     ],
     links: [{ label: "Full Document", url: "https://docs.google.com/document/d/1swESIXyqj-EqjuYWy5XJi9sOwU0QT7BepuVt0-tkcZs/edit" }],
@@ -353,7 +354,7 @@ To the Head of Marketing on the WhatsApp Checkout Bot: I showed that routing a p
 
   "ladda": {
     number: "04",
-    title: "Ladda — User Engagement & Retention",
+    title: "Ladda: User Engagement & Retention",
     company: "Ladda",
     type: "Feature Proposal",
     hook: "Ladda had 30,000+ users on a wealthtech platform. Engagement dropped sharply after onboarding, the app had no habit-forming systems, and users were going inactive without the product ever having the chance to prove its value.",
@@ -408,18 +409,18 @@ A founder-led 45–60-second welcome explainer during onboarding, product-specif
 
 A conversational assistant providing 24/7 FAQ support, personalized portfolio summaries tied to the user's specific goals, and smart behavioral nudges triggered by specific events. AI-driven personalized nudges increase savings uptake by 25–40%.
 
-The sequencing decision — Gamification before AI Companion — was based on evidence density and implementation risk. Gamification has the strongest published retention evidence and lowest technical complexity. It builds the habit loop that makes the AI Companion valuable. Shipping the companion before users have a habit of opening the app means the nudges land in a vacuum.`,
+The sequencing decision to place Gamification before AI Companion was based on evidence density and implementation risk. Gamification has the strongest published retention evidence and lowest technical complexity. It builds the habit loop that makes the AI Companion valuable. Shipping the companion before users have a habit of opening the app means the nudges land in a vacuum.`,
       },
       {
         icon: "demonstrates",
         label: "What This Demonstrates",
         content: `This case study demonstrates structured product thinking applied to a real retention problem.
 
-• Structured product auditing — identifying interconnected problems before jumping to solutions
+• Structured product auditing: identifying interconnected problems before jumping to solutions
 • Competitive analysis used as a strategic input rather than a documentation exercise
 • Feature recommendations grounded in behavioral evidence (Duolingo retention data, fintech gamification studies, AI nudge research) rather than intuition
 • Judgment to sequence feature investment across phases based on value and effort, not just what sounds exciting
-• Revenue context awareness — understanding that the behavioral challenge competes with no savings behavior at all, not just competing apps`,
+• Revenue context awareness: understanding that the behavioral challenge competes with no savings behavior at all, not just competing apps`,
       },
     ],
     links: [{ label: "Full Pitch Deck", url: "https://docs.google.com/presentation/d/1qFDwGqRKedg40Ty-zKh6E8IQvt6MFSjudl551a6nBtg/edit" }],
@@ -427,7 +428,7 @@ The sequencing decision — Gamification before AI Companion — was based on ev
 
   "moneykids": {
     number: "05",
-    title: "MoneyKids.ai — Product Pitch",
+    title: "MoneyKids.ai: Product Pitch",
     company: "MoneyKids.ai",
     type: "Product Pitch",
     hook: "Only 27% of sub-Saharan African adults are financially literate. The problem begins in childhood, and no AI platform is addressing it.",
@@ -485,7 +486,7 @@ Revenue model: Freemium with a paid subscription at N4,000/month. At 20% convers
 • Sizing the opportunity with TAM, SAM, and SOM grounded in World Bank and IMF data
 • Designing a multi-sided platform architecture where each side (children, parents, schools) has distinct needs within a coherent product
 • Building a business case with revenue modeling rather than just a feature list
-• Using the first-mover framing credibly — because the gap in the market is real and documentable`,
+• Using the first-mover framing credibly: the gap in the market is real and documentable`,
       },
     ],
     links: [{ label: "Full Pitch Deck", url: "https://docs.google.com/presentation/d/14ZF6WTe831PApjcRvxMviEU2twACN1Tb143E74fETXY/edit" }],
@@ -493,7 +494,7 @@ Revenue model: Freemium with a paid subscription at N4,000/month. At 20% convers
 
   "youtube-shorts": {
     number: "06",
-    title: "YouTube Shorts — Platform Strategy",
+    title: "YouTube Shorts: Platform Strategy",
     company: "YouTube",
     type: "Competitive Analysis",
     period: "2026",
@@ -520,9 +521,9 @@ YouTube's competitive moat is not short-form video. It is the world's second-lar
 
 YouTube did not allow Shorts to grow organically. It engineered the growth through a $100 million creator fund, a 45% Shorts creator revenue share versus 55% for long-form, and an August 2025 algorithm update that caused a 30% drop in long-form views and cut homepage long-form recommendation slots by approximately 80%.
 
-The 200 billion daily Shorts views came from somewhere — from long-form content on the same platform. Shorts does not expand the YouTube audience. It redistributes existing attention.
+The 200 billion daily Shorts views came from somewhere: long-form content on the same platform. Shorts does not expand the YouTube audience. It redistributes existing attention.
 
-YouTube earns more from Shorts while paying creators less. On every $100 of advertising revenue, YouTube retains approximately $10 more from Shorts than from long-form — a 22% higher take rate per dollar. Per-view creator earnings: Shorts at $0.03–$0.06 per thousand views; long-form at $1.61–$29.30 per thousand views.
+YouTube earns more from Shorts while paying creators less. On every $100 of advertising revenue, YouTube retains approximately $10 more from Shorts than from long-form, a 22% higher take rate per dollar. Per-view creator earnings: Shorts at $0.03–$0.06 per thousand views; long-form at $1.61–$29.30 per thousand views.
 
 The September 2025 decision to decouple the Shorts and long-form recommendation engines was an admission of competition, not complementarity. Walls are not built between things that help each other.
 
@@ -544,10 +545,10 @@ The Spotter case: Spotter deployed $940 million into 735 long-form YouTube chann
         label: "What This Demonstrates",
         content: `This exercise demonstrates the ability to build a rigorous, evidence-based product strategy argument and connect it to business outcomes.
 
-• Building a rigorous, evidence-based argument rather than a narrative-only one — every claim has a number attached to it, traceable to a source a skeptic can check
+• Building a rigorous, evidence-based argument rather than a narrative-only one: every claim has a number attached to it, traceable to a source a skeptic can check
 • Connecting platform-level decisions to measurable economic outcomes (the Spotter case is the strongest element because it is financially concrete, not just analytically interesting)
 • Translating analytical findings into specific, actionable recommendations with precedent and cost estimates
-• Finding the evidence that closes the gap between a product observation and a business impact — the skill this exercise is directly testing`,
+• Finding the evidence that closes the gap between a product observation and a business impact: the skill this exercise is directly testing`,
       },
     ],
     links: [{ label: "Full Presentation", url: "https://docs.google.com/presentation/d/1srd8MPjpzlQeHl9r091Z3lTTlKZZ2ErAKsxIRSPM2rs/edit" }],
@@ -563,6 +564,7 @@ export default function CaseStudyDetailPage() {
   const params = useParams<{ slug: string }>();
   const slug = params.slug ?? "";
   const cs = caseStudies[slug];
+  usePageTitle(cs ? `${cs.company} Case Study` : undefined);
 
   if (!cs) {
     return (
@@ -641,7 +643,7 @@ export default function CaseStudyDetailPage() {
                 {cs.type}
               </motion.div>
               <motion.h1
-                className="font-display text-3xl md:text-5xl text-foreground"
+                className="font-display text-3xl md:text-5xl text-white"
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { useState } from "react";
 import { GlowCard } from "@/components/GlowCard";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const ease = [0.22, 1, 0.36, 1] as [number, number, number, number];
 import headshot from "@assets/Portfolio_shoot_1781129245216.png";
@@ -49,10 +50,11 @@ const services = [
 ];
 
 export default function AboutPage() {
+  usePageTitle("About");
   const [activeTab, setActiveTab] = useState<Tab>("My Story");
 
   return (
-    <main className="w-full pb-24">
+    <main className="w-full">
 
       {/* Page header */}
       <section className="py-20 border-b border-border-subtle">
@@ -121,9 +123,18 @@ export default function AboutPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <div className="rounded-2xl overflow-hidden border border-border-subtle bg-card aspect-[3/4] w-full max-w-xs sticky top-36">
+                <motion.div
+                  className="w-full max-w-[300px] rounded-2xl overflow-hidden bg-card aspect-[3/4] md:sticky md:top-36"
+                  whileHover={{
+                    scale: 1.015,
+                    y: -3,
+                    boxShadow: "0 0 0 1.5px rgba(201,169,110,0.35), 0 16px 40px rgba(0,0,0,0.5)",
+                    transition: { type: "spring", stiffness: 220, damping: 24 },
+                  }}
+                >
                   <img src={headshot} alt="Channels Oladapo" className="w-full h-full object-cover" style={{ objectPosition: "center 5%" }} />
-                </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background/50 to-transparent" />
+                </motion.div>
               </motion.div>
             </div>
 
@@ -203,6 +214,36 @@ export default function AboutPage() {
           </div>
         </section>
       )}
+
+      {/* Let's Talk — always visible regardless of active tab */}
+      <section className="py-10 border-t border-border-subtle">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+          >
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-text-secondary text-sm">Open to opportunities</span>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground">Let's <span className="text-accent italic">Talk</span></h2>
+              <p className="text-text-secondary mt-2 max-w-lg">
+                Open to Associate PM or Mid-PM roles, in early-stage to growth-stage startups building products that matter.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="shrink-0 px-8 py-3.5 bg-accent text-background rounded-full font-semibold hover:bg-accent/90 transition-all inline-flex items-center gap-2 w-fit"
+            >
+              Get In Touch <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
 
     </main>
   );

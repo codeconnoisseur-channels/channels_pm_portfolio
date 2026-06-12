@@ -44,7 +44,7 @@ export function GlowCard({
       whileHover={{
         y: -5,
         boxShadow:
-          "0 0 0 1px rgba(201,169,110,0.25), 0 24px 56px rgba(0,0,0,0.5), 0 0 80px rgba(201,169,110,0.08)",
+          "0 0 0 1px rgba(201,169,110,0.28), 0 20px 48px rgba(0,0,0,0.22), 0 0 72px rgba(201,169,110,0.08)",
         transition: { type: "spring", stiffness: 300, damping: 22 },
       }}
     >

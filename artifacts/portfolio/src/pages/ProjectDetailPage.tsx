@@ -1,5 +1,6 @@
 import { useParams, Link } from "wouter";
 import { useRef, useEffect, useState } from "react";
+import { usePageTitle } from "@/hooks/use-page-title";
 import { motion, useInView } from "framer-motion";
 import { ExternalLink, FileText, Target, Lightbulb, Zap, BookOpen, Users } from "lucide-react";
 import traceaidImg from "@assets/image_1781170985650.png";
@@ -195,10 +196,10 @@ Once a donor has contributed to a campaign, they can track the campaign's progre
 
 Administrators are the operational gatekeepers of the entire trust model. They handle four major responsibilities:
 
-• Organization verification — reviewing submitted documentation before any organization can create a public campaign
-• Campaign approval — reviewing each campaign's structure and milestones before it goes live to donors
-• Milestone evidence review — validating proof of impact submitted by fundraisers before disbursement is authorized
-• Payout authorization — approving withdrawal requests and processing fund transfers to verified bank accounts
+• Organization verification: reviewing submitted documentation before any organization can create a public campaign
+• Campaign approval: reviewing each campaign's structure and milestones before it goes live to donors
+• Milestone evidence review: validating proof of impact submitted by fundraisers before disbursement is authorized
+• Payout authorization: approving withdrawal requests and processing fund transfers to verified bank accounts
 
 Administrators also have access to platform-wide analytics covering donor activity, fundraiser performance, and campaign metrics.
 
@@ -306,7 +307,7 @@ Existing solutions either push the problem onto another platform (LinkedIn) or g
 
 The profile is structured as a tab-based layout rather than a single long scrolling page. Structured sections create navigability, which makes profile information easier to scan and evaluate quickly.
 
-Users choose from three layout templates: Professional (linear, text and link focused, for consultants and service providers), Portfolio (visual-heavy, grid-based, for designers and developers), and Creator (balanced layout with a prominent content section and integrated social links). Switching between templates is non-destructive — no content is lost because content is stored in the database independently of display logic.
+Users choose from three layout templates: Professional (linear, text and link focused, for consultants and service providers), Portfolio (visual-heavy, grid-based, for designers and developers), and Creator (balanced layout with a prominent content section and integrated social links). Switching between templates is non-destructive: no content is lost because content is stored in the database independently of display logic.
 
 Appearance customization includes accent color selection, font pairing, corner style (Sharp, Rounded, or Pill), light/dark mode toggle, a custom CTA button, and an anonymous messaging option that routes messages through the platform without exposing the profile owner's email.
 
@@ -327,11 +328,11 @@ The live URL preview during username entry was a specific UX decision to help us
 
 I wrote the complete Product Requirements Document covering all three core feature areas, with user stories, acceptance criteria, edge cases, and success metrics for each. I co-authored the Technical Requirements Document with the backend lead, defining the system architecture, 15+ API endpoints, PostgreSQL database schema design, authentication flow specifications, and security requirements.
 
-I wrote every ticket for both the frontend and backend teams — detailed, implementation-ready tickets covering expected behavior, edge cases, and acceptance criteria for each task. All tickets were tracked and managed in ClickUp, where I ran the full backlog, maintained sprint structure, and ensured each stream had clear, unblocked work at all times.
+I wrote every ticket for both the frontend and backend teams: detailed, implementation-ready tickets covering expected behavior, edge cases, and acceptance criteria for each task. All tickets were tracked and managed in ClickUp, where I ran the full backlog, maintained sprint structure, and ensured each stream had clear, unblocked work at all times.
 
-I conducted QA testing across multiple rounds throughout the sprint, verifying that each feature behaved as specified before it was marked complete. This included testing the onboarding flow, profile customization, search and discovery, and authentication — across both happy paths and edge cases.
+I conducted QA testing across multiple rounds throughout the sprint, verifying that each feature behaved as specified before it was marked complete. This included testing the onboarding flow, profile customization, search and discovery, and authentication, across both happy paths and edge cases.
 
-I collaborated with fellow PMs, the Design team, VAs, Data Analysts, and the Marketing team on both product delivery and go-to-market strategy — coordinating a launch approach built around a waitlist, a beta group, founder-led outreach, and the team's social media platforms.
+I collaborated with fellow PMs, the Design team, VAs, Data Analysts, and the Marketing team on both product delivery and go-to-market strategy, coordinating a launch approach built around a waitlist, a beta group, founder-led outreach, and the team's social media platforms.
 
 The most consequential contribution I made was not a document. It was a user flow redesign that eliminated a three-week rework cycle that was accumulating because design and engineering were working from different mental models of the same feature. The two teams had made different assumptions about how the profile tab structure and content reordering logic would work. I caught the divergence during a cross-team review, ran a clarification session, and updated the specification so both teams were working from the same model. Catching this before any code was written twice was worth more to the timeline than any document I produced.
 
@@ -340,7 +341,7 @@ The most important prioritization decision I made was drawing a hard line on MVP
       {
         icon: "learnings",
         label: "Key Learnings",
-        content: `Clarity is the highest-leverage input on a large team. At 53 people, the marginal cost of ambiguity is enormous. A single unclear requirement generates misaligned work across multiple streams simultaneously. The most valuable thing I did on this project was not write better documents — it was reduce the time between confusion and resolution.
+        content: `Clarity is the highest-leverage input on a large team. At 53 people, the marginal cost of ambiguity is enormous. A single unclear requirement generates misaligned work across multiple streams simultaneously. The most valuable thing I did on this project was not write better documents; it was reducing the time between confusion and resolution.
 
 Scope protection is an active job. Scope does not stay where you set it. Features get added in conversations, in Slack threads, in design explorations. On a sprint this short, any unplanned scope is a deadline risk. I had to be explicitly, visibly firm about what was in and what was out, repeatedly, throughout the sprint.
 
@@ -351,7 +352,7 @@ The GTM is part of the product. A product is not ready when the last bug is fixe
         label: "What This Means For Your Team",
         content: `This project demonstrates that I can lead large, complex, cross-functional teams through delivery under pressure while maintaining product quality and hitting a deadline. What you get is a PM who:
 
-• Writes detailed, implementation-ready tickets for both frontend and backend teams — not vague task titles, but real specifications with behavior, edge cases, and acceptance criteria
+• Writes detailed, implementation-ready tickets for both frontend and backend teams: not vague task titles, but real specifications with behavior, edge cases, and acceptance criteria
 • Manages the full ticket backlog and sprint structure in ClickUp so engineers always have clear, unblocked work
 • Conducts QA testing across multiple rounds, catching issues before they reach users
 • Protects scope without creating friction with the team
@@ -384,7 +385,7 @@ The GTM is part of the product. A product is not ready when the last bug is fixe
       {
         icon: "overview",
         label: "Overview",
-        content: `Invoiceser is an AI-powered invoicing platform for freelancers and small businesses. It handles the full invoice lifecycle from creation to payment, automates the parts of payment collection that freelancers hate most — chasing clients, tracking what is overdue, sending reminders — and layers an AI assistant on top of the user's financial data so they can get answers to natural language questions about their business.
+        content: `Invoiceser is an AI-powered invoicing platform for freelancers and small businesses. It handles the full invoice lifecycle from creation to payment, automates the parts of payment collection that freelancers hate most (chasing clients, tracking what is overdue, sending reminders), and layers an AI assistant on top of the user's financial data so they can get answers to natural language questions about their business.
 
 I designed and built this product from the ground up, handling product vision, system architecture, AI integration, payment processing, and the full frontend and backend implementation.`,
       },
@@ -404,7 +405,7 @@ Invoices move through four states: Draft, Sent, Overdue, and Paid. The transitio
 
 ## Live Invoice Preview
 
-The invoice editor renders a real-time preview of the final document as the user builds it. There is no save-and-preview cycle. What the user sees in the editor is exactly what the client will receive — a deliberate product decision to eliminate the anxiety of not knowing what you are sending until after you send it.
+The invoice editor renders a real-time preview of the final document as the user builds it. There is no save-and-preview cycle. What the user sees in the editor is exactly what the client will receive, a deliberate product decision to eliminate the anxiety of not knowing what you are sending until after you send it.
 
 ## Automated Payment Reminders
 
@@ -414,7 +415,7 @@ Users configure a reminder schedule per invoice: how many days before the due da
 
 The AI assistant is the feature that separates Invoiceser from every standard invoicing tool. It is powered by Groq's Llama 3 70B model and has full access to the user's invoice data. It answers natural language questions: "Who owes me the most right now?", "What was my strongest month this year?", "Which clients consistently pay late?", "How much have I collected in dollars versus naira?"
 
-The free plan includes ten AI queries per month. The Pro plan includes unlimited queries — putting the most clearly valuable feature behind the upgrade, rather than restricting basic functionality.
+The free plan includes ten AI queries per month. The Pro plan includes unlimited queries, putting the most clearly valuable feature behind the upgrade rather than restricting basic functionality.
 
 ## Multi-Currency Support
 
@@ -454,7 +455,7 @@ Monetization design should align incentives, not restrict functionality. Putting
 • Understands how to identify the specific high-value use case for an AI feature
 • Designs the data access and context that makes AI genuinely work for users
 • Monetizes AI in a way that aligns with the user's experience of value rather than restricting core functionality
-• Can ship a complete product — architecture to deployment — as a solo builder`,
+• Can ship a complete product, from architecture to deployment, as a solo builder`,
       },
     ],
     links: [
@@ -472,6 +473,7 @@ export default function ProjectDetailPage() {
   const params = useParams<{ slug: string }>();
   const slug = params.slug ?? "";
   const project = projects[slug];
+  usePageTitle(project?.title);
 
   if (!project) {
     return (

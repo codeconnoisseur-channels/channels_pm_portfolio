@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { GlowCard } from "@/components/GlowCard";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const ease = [0.22, 1, 0.36, 1] as [number, number, number, number];
 import traceaidImg from "@assets/image_1781170985650.png";
@@ -48,6 +49,7 @@ const projects = [
 ];
 
 export default function ProjectsPage() {
+  usePageTitle("Projects");
   return (
     <main className="w-full pb-24">
       {/* Page Header */}
@@ -79,7 +81,7 @@ export default function ProjectsPage() {
                 initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ delay: i * 0.12, duration: 0.7, ease }}
-                className="bg-card rounded-xl border border-border-subtle hover:border-accent/25 overflow-hidden flex flex-col group transition-colors"
+                className="bg-card rounded-xl border border-border-subtle hover:border-accent/25 flex flex-col group transition-colors"
               >
                 {/* Screenshot thumbnail */}
                 <div className="aspect-[16/9] relative overflow-hidden border-b border-border-subtle bg-card">

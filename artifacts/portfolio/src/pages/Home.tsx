@@ -4,9 +4,10 @@ import headshot from "@assets/Portfolio_shoot_1781129245216.png";
 import traceaidImg from "@assets/image_1781170985650.png";
 import openProfileImg from "@assets/image_1781171105171.png";
 import invoiceserImg from "@assets/image_1781171180415.png";
-import { Lightbulb, Code, Target, ArrowRight, BarChart2, Database, TrendingUp, Cpu, PenTool } from "lucide-react";
-import { SiFigma, SiJira, SiLinear, SiClickup, SiNotion, SiAsana, SiMiro, SiPostman, SiSwagger, SiGithub, SiAnthropic, SiOpenai, SiGoogle, SiN8N, SiGoogleanalytics, SiPosthog, SiConfluence } from "react-icons/si";
+import { Lightbulb, Code, ArrowRight, BarChart2, Database, TrendingUp, MousePointer2, PenTool, Map, FileText, Users, CalendarDays, ListChecks, Layers, Network, Search, GitBranch, FlaskConical, RefreshCw, Globe, Shield, Bug, CreditCard } from "lucide-react";
+import { SiFigma, SiJira, SiLinear, SiClickup, SiNotion, SiAsana, SiMiro, SiPostman, SiSwagger, SiGithub, SiAnthropic, SiOpenai, SiGoogle, SiN8N, SiGoogleanalytics, SiPosthog, SiConfluence, SiJavascript, SiNodedotjs, SiMongodb, SiMysql, SiPostgresql } from "react-icons/si";
 import { GlowCard } from "@/components/GlowCard";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 type Category = "product" | "tech" | "tool";
 const catColor: Record<Category, string> = {
@@ -90,14 +91,15 @@ const ease = [0.22, 1, 0.36, 1] as [number, number, number, number];
 /* ── Hero stagger ── */
 const heroContainer = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.11, delayChildren: 0.08 } },
+  show: { transition: { staggerChildren: 0.13, delayChildren: 0.1 } },
 };
 const heroItem = {
-  hidden: { opacity: 0, y: 38, filter: "blur(6px)" },
-  show:   { opacity: 1, y: 0,  filter: "blur(0px)", transition: { duration: 0.72, ease } },
+  hidden: { opacity: 0, y: 20 },
+  show:   { opacity: 1, y: 0, transition: { duration: 0.9, ease } },
 };
 
 export default function Home() {
+  usePageTitle();
   return (
     <main className="w-full">
 
@@ -136,52 +138,30 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Right — stacked card depth effect + float */}
+            {/* Right — photo */}
             <motion.div
               className="md:w-[50%] w-full flex justify-center"
               initial={{ opacity: 0, x: 28, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ duration: 0.9, delay: 0.32, ease }}
             >
-              <div className="relative w-full max-w-[400px]">
-
-                {/* Ambient glow behind everything */}
-                <motion.div
-                  className="absolute inset-0 rounded-3xl bg-accent/10 blur-3xl"
-                  animate={{ opacity: [0.5, 0.9, 0.5], scale: [0.9, 0.97, 0.9] }}
-                  transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+              <motion.div
+                className="relative w-full max-w-[380px] rounded-2xl overflow-hidden bg-card aspect-[3/4]"
+                whileHover={{
+                  scale: 1.015,
+                  y: -3,
+                  boxShadow: "0 0 0 1.5px rgba(201,169,110,0.35), 0 16px 40px rgba(0,0,0,0.5)",
+                  transition: { type: "spring", stiffness: 220, damping: 24 },
+                }}
+              >
+                <img
+                  src={headshot}
+                  alt="Channels Oladapo"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "center 5%" }}
                 />
-
-                {/* Deepest card layer */}
-                <motion.div
-                  className="absolute inset-x-7 top-5 bottom-0 rounded-3xl bg-[#161616] border border-white/5"
-                  animate={{ y: [3, -7, 3] }}
-                  transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.55 }}
-                />
-
-                {/* Middle card layer */}
-                <motion.div
-                  className="absolute inset-x-3.5 top-2.5 bottom-0 rounded-3xl bg-[#1c1c1c] border border-white/8"
-                  animate={{ y: [1.5, -10, 1.5] }}
-                  transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.28 }}
-                />
-
-                {/* Top card — the actual photo */}
-                <motion.div
-                  className="relative rounded-3xl overflow-hidden border border-border-subtle bg-card aspect-[3/4]"
-                  animate={{ y: [0, -13, 0] }}
-                  transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <img
-                    src={headshot}
-                    alt="Channels Oladapo"
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: "center 5%" }}
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background/50 to-transparent" />
-                </motion.div>
-
-              </div>
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background/50 to-transparent" />
+              </motion.div>
             </motion.div>
 
           </div>
@@ -194,7 +174,7 @@ export default function Home() {
           {doubled.map((item, i) => (
             <span
               key={i}
-              className="group/pill flex items-center gap-2.5 px-4 py-2 mx-2 rounded-full bg-card border border-border-subtle whitespace-nowrap hover:border-white/20 transition-all cursor-default shrink-0"
+              className="group/pill flex items-center gap-2.5 px-4 py-2 mx-2 rounded-full bg-card border border-border-subtle whitespace-nowrap hover:border-accent/40 transition-all cursor-default shrink-0"
             >
               <span
                 className="w-2 h-2 rounded-full flex-shrink-0 transition-all duration-300 opacity-25 group-hover/pill:opacity-100 group-hover/pill:scale-125"
@@ -225,7 +205,7 @@ export default function Home() {
               {/* Back card — warm, tilts left */}
               <motion.div
                 className="absolute inset-x-0 bottom-0 rounded-2xl"
-                style={{ top: "28px", background: "#1c1208", border: "1px solid rgba(201,169,110,0.07)", zIndex: 1 }}
+                style={{ top: "28px", background: "var(--card-lighter)", border: "1px solid var(--border-subtle)", zIndex: 1 }}
                 initial={{ rotate: 0, x: 0, opacity: 0 }}
                 whileInView={{ rotate: -7, x: -12, opacity: 1 }}
                 viewport={{ once: true }}
@@ -235,7 +215,7 @@ export default function Home() {
               {/* Back card — cool, tilts right */}
               <motion.div
                 className="absolute inset-x-0 bottom-0 rounded-2xl"
-                style={{ top: "28px", background: "#0d1521", border: "1px solid rgba(255,255,255,0.04)", zIndex: 2 }}
+                style={{ top: "28px", background: "var(--card)", border: "1px solid var(--border-subtle)", zIndex: 2 }}
                 initial={{ rotate: 0, x: 0, opacity: 0 }}
                 whileInView={{ rotate: 6, x: 11, opacity: 1 }}
                 viewport={{ once: true }}
@@ -266,7 +246,7 @@ export default function Home() {
                 <Link href="/projects" className="text-accent font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
                   Explore my work <ArrowRight className="w-4 h-4" />
                 </Link>
-                <div className="absolute -right-6 -bottom-6 font-display text-[8rem] text-white/3 font-bold select-none leading-none">→</div>
+                <div className="absolute -right-6 -bottom-6 font-display text-[8rem] text-foreground/5 font-bold select-none leading-none">→</div>
               </motion.div>
             </div>
 
@@ -308,7 +288,7 @@ export default function Home() {
             {projects.map((p, i) => (
               <GlowCard
                 key={p.slug}
-                className="bg-card rounded-xl border border-border-subtle overflow-hidden flex flex-col group"
+                className="bg-card rounded-xl border border-border-subtle hover:border-accent/25 flex flex-col group transition-colors"
                 initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 viewport={{ once: true, margin: "-60px" }}
@@ -369,14 +349,14 @@ export default function Home() {
             ].map((cs, i) => (
               <GlowCard
                 key={cs.slug}
-                className="bg-card rounded-xl border border-border-subtle overflow-hidden flex flex-col group"
+                className="bg-card rounded-xl border border-border-subtle hover:border-accent/25 flex flex-col group transition-colors"
                 initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7, delay: i * 0.09, ease } as Parameters<typeof motion.div>[0]["transition"]}
               >
                 <div className="h-40 bg-gradient-to-br from-card to-card-lighter flex items-center p-8 border-b border-border-subtle relative overflow-hidden">
-                  <div className="absolute -right-4 -bottom-8 font-display text-8xl text-white/5 font-bold select-none">{cs.number}</div>
+                  <div className="absolute -right-4 -bottom-8 font-display text-8xl text-foreground/5 font-bold select-none">{cs.number}</div>
                   <div className="relative z-10">
                     <span className="text-accent font-display text-xl">{cs.number}.</span>
                     <h3 className="font-display text-3xl text-foreground mt-1">{cs.company}</h3>
@@ -437,11 +417,20 @@ export default function Home() {
               </div>
               <div className="space-y-3">
                 {[
-                  "Product Roadmapping & Strategy", "PRD & TRD Writing", "User Research & Interviews",
-                  "Market Research", "Design Thinking", "Sprint Planning & Facilitation",
-                  "Backlog Management", "Feature Prioritization (RICE / MoSCoW)", "Stakeholder Management",
-                  "Competitive Analysis", "User Story Mapping", "Data Analysis & A/B Testing", "Agile & Scrum",
-                ].map((skill, i) => (
+                  { name: "Product Roadmapping & Strategy",      Icon: Map          },
+                  { name: "PRD & TRD Writing",                   Icon: FileText     },
+                  { name: "User Research & Interviews",           Icon: Users        },
+                  { name: "Market Research",                      Icon: BarChart2    },
+                  { name: "Design Thinking",                      Icon: Lightbulb    },
+                  { name: "Sprint Planning & Facilitation",       Icon: CalendarDays },
+                  { name: "Backlog Management",                   Icon: ListChecks   },
+                  { name: "Feature Prioritization (RICE/MoSCoW)", Icon: Layers       },
+                  { name: "Stakeholder Management",               Icon: Network      },
+                  { name: "Competitive Analysis",                 Icon: Search       },
+                  { name: "User Story Mapping",                   Icon: GitBranch    },
+                  { name: "Data Analysis & A/B Testing",          Icon: FlaskConical },
+                  { name: "Agile & Scrum",                        Icon: RefreshCw    },
+                ].map(({ name, Icon }, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -16 }}
@@ -450,8 +439,8 @@ export default function Home() {
                     transition={{ delay: i * 0.035, duration: 0.45, ease }}
                     className="bg-card p-4 rounded-lg border border-border-subtle flex items-center gap-4 hover:border-accent/40 transition-colors"
                   >
-                    <Target className="w-4 h-4 text-accent flex-shrink-0" />
-                    <span className="text-sm font-medium text-foreground">{skill}</span>
+                    <Icon className="w-4 h-4 text-accent flex-shrink-0" />
+                    <span className="text-sm font-medium text-foreground">{name}</span>
                   </motion.div>
                 ))}
               </div>
@@ -472,12 +461,21 @@ export default function Home() {
               </div>
               <div className="space-y-3">
                 {[
-                  "JavaScript (ES6+)", "Node.js", "Express.js", "RESTful APIs",
-                  "MongoDB", "MySQL", "PostgreSQL (Relational Database)",
-                  "Database Design & Architecture", "JWT Auth & API Security",
-                  "API Testing (Postman)", "API Documentation (Swagger)",
-                  "QA Testing & Prototyping", "Git & GitHub", "KoraPay & Paystack Integration",
-                ].map((skill, i) => (
+                  { name: "JavaScript (ES6+)",               Icon: SiJavascript },
+                  { name: "Node.js",                         Icon: SiNodedotjs  },
+                  { name: "Express.js",                      Icon: Code         },
+                  { name: "RESTful APIs",                    Icon: Globe        },
+                  { name: "MongoDB",                         Icon: SiMongodb    },
+                  { name: "MySQL",                           Icon: SiMysql      },
+                  { name: "PostgreSQL",                      Icon: SiPostgresql },
+                  { name: "Database Design & Architecture",  Icon: Database     },
+                  { name: "JWT Auth & API Security",         Icon: Shield       },
+                  { name: "API Testing (Postman)",           Icon: SiPostman    },
+                  { name: "API Documentation (Swagger)",     Icon: SiSwagger    },
+                  { name: "QA Testing & Prototyping",        Icon: Bug          },
+                  { name: "Git & GitHub",                    Icon: SiGithub     },
+                  { name: "KoraPay & Paystack Integration",  Icon: CreditCard   },
+                ].map(({ name, Icon }, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: 16 }}
@@ -486,8 +484,8 @@ export default function Home() {
                     transition={{ delay: i * 0.035, duration: 0.45, ease }}
                     className="bg-card p-4 rounded-lg border border-border-subtle flex items-center gap-4 hover:border-accent/40 transition-colors"
                   >
-                    <Target className="w-4 h-4 text-accent flex-shrink-0" />
-                    <span className="text-sm font-medium text-foreground">{skill}</span>
+                    <Icon className="w-4 h-4 text-accent flex-shrink-0" />
+                    <span className="text-sm font-medium text-foreground">{name}</span>
                   </motion.div>
                 ))}
               </div>
@@ -509,12 +507,12 @@ export default function Home() {
                 { name: "Jira",             icon: SiJira,      color: "#0052CC" },
                 { name: "Linear",           icon: SiLinear,    color: "#5E6AD2" },
                 { name: "ClickUp",          icon: SiClickup,   color: "#7B68EE" },
-                { name: "Notion",           icon: SiNotion,    color: "#FFFFFF" },
+                { name: "Notion",           icon: SiNotion,    color: "var(--foreground)" },
                 { name: "Asana",            icon: SiAsana,     color: "#F06A6A" },
                 { name: "Miro",             icon: SiMiro,      color: "#FFD02F" },
                 { name: "Postman",          icon: SiPostman,   color: "#FF6C37" },
                 { name: "Swagger",          icon: SiSwagger,   color: "#85EA2D" },
-                { name: "GitHub",           icon: SiGithub,    color: "#FFFFFF" },
+                { name: "GitHub",           icon: SiGithub,    color: "var(--foreground)" },
                 { name: "Claude",           icon: SiAnthropic, color: "#D97757" },
                 { name: "ChatGPT",          icon: SiOpenai,    color: "#10A37F" },
                 { name: "Gemini",           icon: SiGoogle,          color: "#4285F4" },
@@ -523,7 +521,7 @@ export default function Home() {
                 { name: "Google Analytics", icon: SiGoogleanalytics, color: "#E37400" },
                 { name: "PostHog",          icon: SiPosthog,         color: "#C9A96E" },
                 { name: "SQL",              icon: Database,          color: "#60A5FA" },
-                { name: "Cursor",           icon: Cpu,               color: "#FFFFFF" },
+                { name: "Cursor",           icon: MousePointer2,     color: "var(--foreground)" },
                 { name: "Confluence",       icon: SiConfluence,      color: "#0052CC" },
                 { name: "Whimsical",        icon: PenTool,           color: "#A78BFA" },
               ].map((tool, i) => (
@@ -545,6 +543,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-20">
+          <motion.div
+            variants={reveal}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.75, ease }}
+            className="text-center mb-14"
+          >
+            <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-4">Testimonials</div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                badge: "Peer Review",
+                quote: "Every interaction with Channels would always leave one with no reason to doubt his exceptional ability, and his work is one I admire so much. As a fellow acting PM, I have seen him excel at product research, sprint prioritisation, and product defences (a key highlight he is known for). He has a proper understanding of whatever he is handling, and you can be anywhere else with peace of mind, knowing that \"Channels is on the job\". He carries such a wonderful charisma and is properly grounded. A typical needle (or gem, if you will) in any haystack of an organisation.",
+                name: "Chidubem Ojukwu",
+                title: "Product Manager Intern, HNG i14",
+                initials: "CO",
+              },
+              {
+                badge: "Mentor Evaluation",
+                quote: "Excellent submission. Strong strategic thinking, detailed RICE prioritization, and very professional stakeholder communication. Video presentation was confident, clear, and demonstrated strong understanding of trade-offs, risk management, and roadmap prioritisation. Great work overall.",
+                name: "Omotomiwa Afonja",
+                title: "Product Management Mentor, HNG i14",
+                initials: "OA",
+              },
+            ].map((t, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 36 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.7, delay: i * 0.14, ease }}
+                className="relative bg-card border border-border-subtle rounded-2xl p-8 flex flex-col gap-6 overflow-hidden"
+              >
+                {/* Decorative background quote mark */}
+                <div className="absolute -top-4 -right-2 font-display text-[9rem] leading-none text-accent/5 select-none pointer-events-none">"</div>
+
+                {/* Badge */}
+                <div className="flex items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-accent/30 bg-accent/10 text-accent text-[11px] font-bold tracking-wide uppercase">
+                    {t.badge}
+                  </span>
+                </div>
+
+                {/* Quote */}
+                <p className="text-text-secondary leading-relaxed text-[15px] relative z-10 flex-1">
+                  "{t.quote}"
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center gap-3 pt-4 border-t border-border-subtle">
+                  <div className="w-10 h-10 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
+                    <span className="text-accent font-bold text-xs">{t.initials}</span>
+                  </div>
+                  <div>
+                    <div className="text-foreground font-semibold text-sm">{t.name}</div>
+                    <div className="text-text-secondary text-xs mt-0.5">{t.title}</div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT CTA */}
       <section id="contact-cta" className="py-24 bg-card/30">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-20">
@@ -556,15 +624,12 @@ export default function Home() {
             transition={{ duration: 0.75, ease }}
             className="text-center max-w-3xl mx-auto"
           >
-            <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-6">Let's Collaborate</div>
+            <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-6">Get In Touch</div>
             <h2 className="font-display text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight">
               Let's Make <span className="text-accent italic">Magic</span>
             </h2>
-            <p className="text-text-secondary text-xl mb-4">
+            <p className="text-text-secondary text-xl mb-12">
               Do you have an idea? Ready to build something great? I'd love to hear about your project.
-            </p>
-            <p className="text-text-secondary mb-12">
-              Open to entry-to-mid level roles, remote or hybrid, in early-stage to growth-stage startups.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link href="/contact" className="px-8 py-4 bg-accent text-background rounded-full font-semibold hover:bg-accent/90 transition-all flex items-center gap-2">

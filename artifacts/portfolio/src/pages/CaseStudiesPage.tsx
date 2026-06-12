@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { GlowCard } from "@/components/GlowCard";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const ease = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -15,6 +16,7 @@ const caseStudies = [
 ];
 
 export default function CaseStudiesPage() {
+  usePageTitle("Case Studies");
   return (
     <main className="w-full pb-24">
       <section className="py-20 border-b border-border-subtle">
@@ -40,10 +42,10 @@ export default function CaseStudiesPage() {
                 initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ delay: i * 0.1, duration: 0.7, ease }}
-                className="bg-card rounded-xl border border-border-subtle hover:border-accent/25 overflow-hidden flex flex-col group transition-colors"
+                className="bg-card rounded-xl border border-border-subtle hover:border-accent/25 flex flex-col group transition-colors"
               >
                 <div className="h-44 bg-gradient-to-br from-card to-card-lighter flex items-center p-8 border-b border-border-subtle relative overflow-hidden">
-                  <div className="absolute -right-4 -bottom-8 font-display text-8xl text-white/5 font-bold select-none">{cs.number}</div>
+                  <div className="absolute -right-4 -bottom-8 font-display text-8xl text-foreground/5 font-bold select-none">{cs.number}</div>
                   <div className="relative z-10">
                     <span className="text-accent font-display text-xl">{cs.number}.</span>
                     <h3 className="font-display text-3xl text-foreground mt-1">{cs.company}</h3>
