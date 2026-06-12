@@ -1,5 +1,2 @@
 packages:
   - artifacts/portfolio
-
-onlyBuiltDependencies:
-  - esbuild

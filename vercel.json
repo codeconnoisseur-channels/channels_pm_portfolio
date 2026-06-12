@@ -1,6 +1,6 @@
 {
-  "installCommand": "pnpm install",
-  "buildCommand": "pnpm --filter @workspace/portfolio build",
+  "installCommand": "npm install --prefix artifacts/portfolio",
+  "buildCommand": "npm run build --prefix artifacts/portfolio",
   "outputDirectory": "artifacts/portfolio/dist/public",
   "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
