@@ -133,8 +133,7 @@ export default function CVPage() {
         >
           <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">RESUME</div>
           <h1 className="font-display text-5xl md:text-6xl text-foreground mb-2">Channels Okunade Oladapo</h1>
-          <p className="text-accent text-xl font-medium mb-1">Technical Product Manager</p>
-          <p className="text-text-secondary text-sm mb-6">Lagos State, Nigeria · Available Globally</p>
+          <p className="text-accent text-xl font-medium mb-6">Technical Product Manager</p>
           <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-text-secondary mb-6">
             <a href="mailto:channelsokunade@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors min-w-0" data-testid="cv-email">
               <Mail className="w-4 h-4 text-accent shrink-0" />
@@ -156,7 +155,7 @@ export default function CVPage() {
             </a>
           </div>
           <motion.a
-            href="https://drive.google.com/uc?export=download&id=1m5WSfuVq2IfAgh5fVbubAiyXUktcfUB4"
+            href="https://drive.google.com/file/d/1E7fV6tcybksFxlgcvka4W8ly-UaoHfAa/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-background rounded-full font-semibold text-sm hover:bg-accent/90 transition-colors"
