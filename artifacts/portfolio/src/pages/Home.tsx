@@ -568,7 +568,7 @@ export default function Home() {
               },
               {
                 badge: "Mentor Evaluation",
-                quote: "Excellent submission. Strong strategic thinking, detailed RICE prioritization, and very professional stakeholder communication. Video presentation was confident, clear, and demonstrated strong understanding of trade-offs, risk management, and roadmap prioritisation. Great work overall.",
+                quote: "I can personally attest to Channels Oladapo's exemplary technical depth, product knowledge, research, and team collaboration skills. I served as his mentor during his Product Management Internship at HNG Tech, where he performed outstandingly in all team and individual tasks.\n\nAside from owning and steering his team's product effectively, he also demonstrated a deep interest in understanding the products of other teams. This curiosity, combined with his core PM skills, made him stand out throughout the internship and earned him one of the two 'Mentor's Choice' awards at the end of the program.\n\nI have no doubt in recommending him for any professional or academic pursuit, as I am confident he will be an outstanding addition to any team.",
                 name: "Omotomiwa Afonja",
                 title: "Product Management Mentor, HNG i14",
                 initials: "OA",
