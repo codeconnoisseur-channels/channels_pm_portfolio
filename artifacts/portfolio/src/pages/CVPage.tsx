@@ -114,7 +114,13 @@ const achievements = [
     title: "HNG i14 Finalist – Product Management Track",
     org: "HNG Tech",
     period: "2026",
-    badges: ["10 Stages Completed", "Won Best in Product Management: Mentors' Choice Award", "Top 1% of 1,000+ PM Interns"],
+    badges: ["10 Stages Completed", "Final 140 out of 10,000 Interns"],
+  },
+  {
+    title: "Best in Product Management: Mentors' Choice Award",
+    org: "HNG Tech",
+    period: "2026",
+    badges: ["Top 1% of 1,000+ PM Interns"],
   },
 ];
 
