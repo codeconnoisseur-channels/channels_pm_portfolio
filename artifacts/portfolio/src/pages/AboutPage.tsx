@@ -103,7 +103,7 @@ export default function AboutPage() {
                 <p className="text-foreground font-semibold text-2xl leading-snug font-display">
                   A Product Manager who builds and ships products that users love and drives revenue for the business.
                 </p>
-                <p>
+                <p className="text-text-secondary">
                   My technical foundation in backend engineering, where I designed database schemas, built APIs, integrated payment systems, and worked on production applications using Node.js, Express, MongoDB, and PostgreSQL, has shaped how I think about product decisions. I do not see products as just features and outcomes. I see them as systems shaped by architecture, constraints, and trade-offs.
                 </p>
                 <p>
