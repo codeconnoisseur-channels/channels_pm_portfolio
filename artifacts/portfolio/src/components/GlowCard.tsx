@@ -39,7 +39,7 @@ export function GlowCard({
       transition={transition}
       custom={custom}
       variants={variants}
-      style={style}
+      style={{ ...style, overflow: "hidden" }}
       onClick={onClick}
       whileHover={{
         y: -5,

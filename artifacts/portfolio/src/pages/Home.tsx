@@ -224,7 +224,7 @@ export default function Home() {
 
               {/* Main card — door-handle hover tilt */}
               <motion.div
-                className="relative z-10 bg-card border border-border-subtle rounded-2xl p-7 md:p-10 overflow-hidden"
+                className="relative z-10 bg-card border border-border-subtle rounded-2xl p-5 md:p-9 overflow-hidden"
                 style={{ transformOrigin: "50% 100%" }}
                 whileHover={{
                   rotateZ: 2.5,
