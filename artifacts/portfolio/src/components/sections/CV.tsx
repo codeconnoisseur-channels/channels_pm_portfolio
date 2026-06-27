@@ -6,7 +6,7 @@ const experience = [
     company: "HNG Tech",
     period: "April 2026 to June 2026",
     location: "Lagos, Nigeria",
-    description: "Technical PM Lead coordinating a 53-person cross-functional team to deliver Open Profile from zero to live production in three weeks. Collaborated with Product Managers, Design, VAs, and Data Analysts, and partnered with Marketing on a GTM strategy leveraging a waitlist, beta group, founder-led outreach, and community channels."
+    description: "Technical Product Manager Lead coordinating a 53-person cross-functional team to deliver Open Profile from zero to live production in three weeks. Collaborated with Product Managers, Design, VAs, and Data Analysts, and partnered with Marketing on a GTM strategy leveraging a waitlist, beta group, founder-led outreach, and community channels."
   },
   {
     role: "Backend Development Trainee",

@@ -1,11 +1,11 @@
 import { useParams, Link } from "wouter";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, ReactNode } from "react";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { motion, useInView } from "framer-motion";
 import { ExternalLink, FileText, Target, Lightbulb, Zap, BookOpen, Users } from "lucide-react";
 import traceaidImg from "@assets/image_1781170985650.png";
 import openProfileImg from "@assets/image_1781171105171.png";
-import invoiceserImg from "@assets/image_1781171180415.png";
+import invoiceserImg from "@assets/invoiceser_image.jpg";
 
 function useCountUp(end: number, active: boolean, duration = 1300) {
   const [val, setVal] = useState(0);
@@ -96,7 +96,7 @@ function renderContent(content: string) {
   }).filter(Boolean);
 }
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Record<string, ReactNode> = {
   live:      <Zap className="w-4 h-4 text-accent" />,
   api:       <FileText className="w-4 h-4 text-accent" />,
   milestone: <Target className="w-4 h-4 text-accent" />,
@@ -115,7 +115,7 @@ const iconMap: Record<string, JSX.Element> = {
   notify:    <Zap className="w-4 h-4 text-accent" />,
 };
 
-const sectionIcons: Record<string, JSX.Element> = {
+const sectionIcons: Record<string, ReactNode> = {
   overview:  <BookOpen className="w-4 h-4 text-accent" />,
   problem:   <Target className="w-4 h-4 text-accent" />,
   features:  <Lightbulb className="w-4 h-4 text-accent" />,
@@ -144,7 +144,7 @@ const projects: Record<string, ProjectData> = {
   "traceaid": {
     title: "TraceAid",
     subtitle: "Three-Sided Crowdfunding & Accountability Platform",
-    role: "Overall Team Lead · PM & Backend Developer",
+    role: "Overall Team Lead · Product Manager & Backend Developer",
     type: "Crowdfunding Platform",
     stack: "Node.js · Express.js · MongoDB · KoraPay · Cloudinary · JWT · Swagger",
     status: "Live",
@@ -270,9 +270,9 @@ Three-sided platforms require three times the user thinking. Every single featur
   "open-profile": {
     title: "Open Profile",
     subtitle: "Identity Platform for Freelancers & Creators",
-    role: "Technical PM Lead",
+    role: "Technical Product Manager Lead",
     type: "Identity Platform · Web Application",
-    stack: "PostgreSQL · 15+ API Endpoints · 3-week sprint",
+    stack: "PostgreSQL · 46 API Endpoints · 3-week sprint",
     status: "Live",
     team: "53 people across 5 functional streams",
     period: "3 weeks, discovery to launch",
@@ -280,7 +280,7 @@ Three-sided platforms require three times the user thinking. Every single featur
     stats: [
       { icon: "team",  value: "53",          label: "People coordinated across 5 streams" },
       { icon: "time",  value: "3 Weeks",     label: "Discovery to live production" },
-      { icon: "api",   value: "15+",         label: "API endpoints defined in TRD" },
+      { icon: "api",   value: "46",         label: "API endpoints defined in TRD" },
       { icon: "live",  value: "On Schedule", label: "Launched within the build window" },
     ],
     sections: [
@@ -289,7 +289,7 @@ Three-sided platforms require three times the user thinking. Every single featur
         label: "Overview",
         content: `Open Profile is a web-based identity platform that gives freelancers, creators, and indie builders a single, owned, and shareable public profile. Users build a structured, multi-section profile, select from three layout templates, customize the visual appearance, and get a permanent URL that anyone can find through the platform's built-in search system.
 
-I led this product as Technical PM Lead during a three-week intensive build sprint at HNG, one of Nigeria's largest developer internship programs. I was accountable for the product from the first planning session to the launch, coordinating a 53-person team across engineering, design, QA, DevOps, marketing, and fellow PMs.`,
+I led this product as Technical Product Manager Lead during a three-week intensive build sprint at HNG, one of Nigeria's largest developer internship programs. I was accountable for the product from the first planning session to the launch, coordinating a 53-person team across engineering, design, QA, DevOps, marketing, and fellow PMs.`,
       },
       {
         icon: "problem",
@@ -303,9 +303,11 @@ Existing solutions either push the problem onto another platform (LinkedIn) or g
       {
         icon: "features",
         label: "Product Core Features",
-        content: `## Profile Creation and Customization
+        content: `## Profile Creation
 
 The profile is structured as a tab-based layout rather than a single long scrolling page. Structured sections create navigability, which makes profile information easier to scan and evaluate quickly.
+
+## Profile Customization
 
 Users choose from three layout templates: Professional (linear, text and link focused, for consultants and service providers), Portfolio (visual-heavy, grid-based, for designers and developers), and Creator (balanced layout with a prominent content section and integrated social links). Switching between templates is non-destructive: no content is lost because content is stored in the database independently of display logic.
 
@@ -315,18 +317,21 @@ Appearance customization includes accent color selection, font pairing, corner s
 
 The search system is what separates Open Profile from a standard link-in-bio tool. Any visitor can search by name or username from the landing page, with no account required. Search results display as profile cards showing the user's avatar, display name, username, and a truncated bio.
 
-## Authentication and Onboarding
+## Authentication
 
-Two sign-up methods are supported: email and password, and Google OAuth 2.0. Both feed into a standardized three-step onboarding wizard: basic information (avatar upload, full name, username with live URL preview, and bio), template selection, and appearance customization.
+Two sign-up methods are supported: email and password, and Google OAuth 2.0. Email verification is required before a profile can be published publicly. The authentication system includes brute-force protection: five failed login attempts within ten minutes locks the account for fifteen minutes.
 
-The live URL preview during username entry was a specific UX decision to help users understand exactly what they are committing to before they commit. Email verification is required before a profile can be published publicly. The authentication system includes brute-force protection: five failed login attempts within ten minutes locks the account for fifteen minutes.`,
+## Onboarding
+
+Both authentication methods feed into a standardized three-step onboarding wizard: basic information (avatar upload, full name, username with live URL preview, and bio), template selection, and appearance customization. The live URL preview during username entry was a specific UX decision to help users understand exactly what they are committing to before they commit.\`,
+      },en minutes locks the account for fifteen minutes.`,
       },
       {
         icon: "role",
         label: "My Role",
-        content: `I was the Technical PM Lead, accountable for the product from the first day of the sprint to the moment it launched.
+        content: `I was the Technical Product Manager Lead, accountable for the product from the first day of the sprint to the moment it launched.
 
-I wrote the complete Product Requirements Document covering all three core feature areas, with user stories, acceptance criteria, edge cases, and success metrics for each. I co-authored the Technical Requirements Document with the backend lead, defining the system architecture, 15+ API endpoints, PostgreSQL database schema design, authentication flow specifications, and security requirements.
+I wrote the complete Product Requirements Document covering all five core feature areas, with user stories, acceptance criteria, edge cases, and success metrics for each. I co-authored the Technical Requirements Document with the backend lead, defining the system architecture, 46 API endpoints, PostgreSQL database schema design, authentication flow specifications, and security requirements.
 
 I wrote every ticket for both the frontend and backend teams: detailed, implementation-ready tickets covering expected behavior, edge cases, and acceptance criteria for each task. All tickets were tracked and managed in ClickUp, where I ran the full backlog, maintained sprint structure, and ensured each stream had clear, unblocked work at all times.
 
@@ -364,16 +369,18 @@ The GTM is part of the product. A product is not ready when the last bug is fixe
       { label: "Visit Live App",               url: "https://open-profile.hng14.com/" },
       { label: "Product Requirements Doc (PRD)", url: "https://docs.google.com/document/d/1FF2PDRPHEyODepfxCFEzHcGXHHwTRfjU-DadeiS6jhY/edit" },
       { label: "Technical Requirements Doc (TRD)", url: "https://docs.google.com/document/d/1yN8NWlFPGvhMejkEDVfq3Yo0RwMXRlCStUbpBHS9CzM/edit" },
+      { label: "API Documentation", url: "https://api.open-profile.hng14.com/docs#/" },
+      { label: "Entity Relationship Document", url: "https://dbdiagram.io/d/open_profile_dbml-69fba7bd7a923b94723905aa" },
     ],
   },
 
   "invoiceser": {
     title: "Invoiceser",
-    subtitle: "AI-Powered Invoicing & Financial Intelligence Platform",
-    role: "AI Product Manager · Full-Stack Developer",
-    type: "SaaS · AI-Powered Invoicing",
-    stack: "Next.js 14 · Convex · Clerk · Resend · Groq (Llama 3 70B) · KoraPay · Recharts",
-    status: "Live",
+    subtitle: "AI-Powered Invoicing and Financial Intelligence Platform",
+    role: "AI Product Manager and Full-Stack Developer",
+    type: "AI-Powered Invoicing and Financial Intelligence Platform, SaaS",
+    stack: "Next.js 14, Convex (real-time serverless backend), Clerk, Nodemailer (SMTP), Groq (Llama 3 70B), KoraPay, PostHog, Recharts",
+    status: "Live, in active development",
     image: invoiceserImg,
     stats: [
       { icon: "ai",       value: "AI Powered",    label: "Groq Llama 3 70B financial assistant" },
@@ -385,81 +392,143 @@ The GTM is part of the product. A product is not ready when the last bug is fixe
       {
         icon: "overview",
         label: "Overview",
-        content: `Invoiceser is an AI-powered invoicing platform for freelancers and small businesses. It handles the full invoice lifecycle from creation to payment, automates the parts of payment collection that freelancers hate most (chasing clients, tracking what is overdue, sending reminders), and layers an AI assistant on top of the user's financial data so they can get answers to natural language questions about their business.
+        content: `Invoiceser is an AI-powered invoicing and payments platform for freelancers, creators, and small agencies. It streamlines the entire billing workflow from invoice creation through payment collection, layers real-time notifications on top of every state change, and gives users a conversational AI assistant that can answer plain-English questions about their own cash flow, revenue, and clients.
 
-I designed and built this product from the ground up, handling product vision, system architecture, AI integration, payment processing, and the full frontend and backend implementation.`,
+I designed and built this product from the ground up: product strategy, system architecture, database schema, AI integration, payment processing, analytics instrumentation, and the full frontend and backend implementation. I am also the one maintaining and evolving it, with a defined multi-phase roadmap guiding what gets built next.`,
       },
       {
         icon: "problem",
         label: "The Problem",
-        content: `Freelancers and small business owners manage invoicing across a combination of spreadsheets, WhatsApp messages, email threads, and memory. When a payment is overdue, they have to manually identify it, manually compose a reminder, and manually track whether it was read. When they want to understand their revenue pattern, they have to aggregate data across multiple sources by hand. When they need a professional-looking PDF invoice, they use tools not designed for their context, with currencies and formatting that do not fit their reality.
+        content: `Freelancers, independent creators, and small agencies consistently run into the same four pain points when they try to manage billing. Their tools are fragmented: invoices in Word or Excel, a separate payment gateway, and a spreadsheet to track who has paid. Payments get delayed because chasing a client for money is awkward and easy to put off, so it does not happen consistently. Basic business questions are hard to answer quickly, things like how much came in last month or which client owes the most, because the data needed to answer them is scattered across tools that do not talk to each other. And the invoices themselves often look unprofessional, which quietly undermines the credibility of the person sending them.
 
-Invoiceser was built to consolidate the full invoice lifecycle, automated reminders, multi-currency tracking, and financial intelligence into one purpose-built platform for freelancers.`,
+Invoiceser was built to remove all four problems by consolidating the full invoice lifecycle, automated reminders, multi-currency tracking, and financial intelligence into one purpose-built platform.`,
+      },
+      {
+        icon: "features",
+        label: "The Solution",
+        content: `The product centers on four commitments. Invoices that are genuinely beautiful and customizable, so they build trust and reinforce the sender's brand rather than undermine it. Automated payment reminders, so a user never has to manually chase a client unless they choose to. A real-time dashboard and wallet that instantly reflects what has been collected and what is still outstanding. And a Groq-powered AI assistant that can answer plain-English questions about cash flow, revenue, and clients on demand.`,
       },
       {
         icon: "features",
         label: "Product Core Features",
-        content: `## Invoice Lifecycle Management
+        content: `## Invoicing Engine
 
-Invoices move through four states: Draft, Sent, Overdue, and Paid. The transition from Sent to Overdue is automated by a Convex cron job that runs daily and checks due dates. Partial payments are supported: a client can pay in multiple installments, and the dashboard reflects the outstanding balance in real time.
+The invoice editor is a live, WYSIWYG builder. What the user sees while building the invoice is exactly what the client receives, with no separate preview step. Invoices support Draft and Published states, so a user can save work in progress without sending anything prematurely. The platform bills in 15 currencies including USD, GBP, EUR, and NGN, with built-in support for Sales Tax and VAT. Once an invoice is finalized, the platform generates a PDF and sends it by email in a single action.
 
-## Live Invoice Preview
+## Invoice Lifecycle and Payment Tracking
 
-The invoice editor renders a real-time preview of the final document as the user builds it. There is no save-and-preview cycle. What the user sees in the editor is exactly what the client will receive, a deliberate product decision to eliminate the anxiety of not knowing what you are sending until after you send it.
+Invoices move through four states: Draft, Sent, Overdue, and Paid. The transition to Overdue is automated by a Convex cron job that checks due dates daily, with no manual intervention required. The wallet dashboard strictly separates Collected from Awaiting Payment amounts, broken out per currency. Payments can be recorded as full or partial, and the dashboard reflects the outstanding balance instantly when a payment is logged.
+
+## Client Management
+
+A contact directory stores both individual and business clients, each with a historical view of every invoice issued to them. This gives a freelancer a single place to see their full relationship with any one client rather than reconstructing it from a search through old emails.
 
 ## Automated Payment Reminders
 
-Users configure a reminder schedule per invoice: how many days before the due date to send the first reminder, and how many days after to send follow-up reminders. Invoiceser handles the sending automatically via Resend, with the invoice PDF attached. Users never have to manually chase a payment unless they choose to.
+Users configure a reminder schedule per invoice, specifying how many days before the due date the first reminder should go out and how many days after a follow-up should fire. Convex cron jobs evaluate every invoice against its due date daily and trigger the appropriate reminder automatically via SMTP, with the invoice PDF attached. This is the single feature most directly responsible for removing the awkward, manual work of chasing a client for money.
 
 ## The AI Assistant
 
-The AI assistant is the feature that separates Invoiceser from every standard invoicing tool. It is powered by Groq's Llama 3 70B model and has full access to the user's invoice data. It answers natural language questions: "Who owes me the most right now?", "What was my strongest month this year?", "Which clients consistently pay late?", "How much have I collected in dollars versus naira?"
+The AI assistant is powered by Groq's Llama 3 70B model and is built on a context injection architecture rather than a generic chatbot wrapper. When a user submits a question, Convex retrieves that user's clients, invoices, and settings, serializes the relevant data into a strict, read-only system prompt, and only then sends it to the model. The assistant answers from the user's actual data: "Who owes me the most right now?", "What was my strongest month this year?", "Which clients consistently pay late?" The free plan includes ten AI queries per month. The Pro plan includes unlimited queries, which puts the most clearly valuable feature behind the upgrade rather than restricting basic invoicing functionality.
 
-The free plan includes ten AI queries per month. The Pro plan includes unlimited queries, putting the most clearly valuable feature behind the upgrade rather than restricting basic functionality.
+## Real-Time Notifications and Dashboard
 
-## Multi-Currency Support
+The entire application is built on Convex live queries instead of a traditional client-side state management library. When a client opens a shared invoice link, the sender gets an in-app notification immediately. When a payment is recorded, the wallet updates without a page refresh. The UI is never out of sync with the database because it is wired directly to it.
 
-The earnings wallet tracks collected amounts per currency independently, without forced conversion. A freelancer billing in dollars, naira, and pounds simultaneously can see exactly how much they have collected in each currency, alongside a consolidated summary. This was a product requirement driven by the reality of how freelancers work across international clients.
+## Multi-Currency Wallet
 
-## Real-Time Notifications
-
-When a client opens a shared invoice link, the user receives an in-app notification immediately, powered by Convex's live query subscriptions. Notifications are also triggered when a payment is recorded and when an invoice moves to Overdue.
+The earnings wallet tracks collected amounts per currency independently, with no forced conversion. A freelancer billing in dollars, naira, and pounds simultaneously sees exactly how much they have collected in each currency, alongside a consolidated summary view.
 
 ## Pro Plan and Monetization
 
-The Pro plan is accessible via a KoraPay upgrade flow and unlocks unlimited AI queries, predictive analytics, custom branding (own fonts, invoice styles, and email domain with no Invoiceser branding), and the ability to set a custom reply-to address. The upgrade flow uses KoraPay's hosted payment page, with a webhook handler that confirms the transaction and upgrades the user's plan automatically.`,
+The Pro plan is unlocked through a KoraPay checkout flow and includes unlimited AI queries, custom branding (the user's own fonts, invoice styles, and a custom invoice prefix, with no Invoiceser branding visible to their clients), and predictive analytics. A webhook handler confirms successful payment and upgrades the user's plan automatically with no manual step required.
+
+## Product Analytics
+
+Invoiceser is instrumented with PostHog across both client and server side, tracking the full funnel from signup through onboarding completion, first invoice sent, payment recorded, and Pro conversion. Specific events are tracked with deliberate properties: invoice_sent carries an is_first flag specifically to measure time-to-first-value for new users, and ai_query carries isPro to analyze whether AI usage correlates with upgrade behavior. This was a decision to make the product measurable from the inside, not just demoable from the outside.
+
+## Admin Panel
+
+An internal dashboard supports user management, system announcements, and support handling, built to support operational management of the platform as the user base grows.`,
+      },
+      {
+        icon: "api",
+        label: "System Architecture and Security",
+        content: `The platform runs on a fully serverless, real-time stack. Convex serves as both the database and the backend function layer, maintaining live WebSocket connections so that any change to the data is pushed to the client instantly with no polling and no manual refresh logic anywhere in the codebase.
+
+Authentication is handled by Clerk, which issues a signed JWT that the Next.js client passes to Convex over the WebSocket connection on every request. Authorization is enforced through Row-Level Security at the database layer: every single Convex query and mutation filters by the authenticated user's ID before returning any data, which makes cross-tenant data leakage architecturally impossible rather than something the application layer has to remember to check.`,
+      },
+      {
+        icon: "time",
+        label: "Product Roadmap",
+        content: `I planned and am executing Invoiceser across five distinct phases, each with a clear goal and a defined scope. This roadmap is a living artifact I use to sequence what gets built next.
+
+Phase 1, the MVP, is fully implemented. Its goal was to solve the core problem of fragmented invoice creation and basic cash flow visibility to reach initial product-market fit: the core invoicing engine, a basic client directory, manual payment tracking, and version one of the AI assistant.
+
+Phase 2, Automation, Analytics, and Monetization, is in progress. Its goal is to remove manual friction from the user's workflow, introduce a sustainable revenue model, and instrument the product for data-driven decisions. The Pro plan tier, automated reminders, custom branding, and the full PostHog analytics integration are complete.
+
+Phase 3, End-Client Experience and Frictionless Payments, is upcoming. Its goal is to improve the experience for the person paying the invoice, not just the person sending it, and to drive down time-to-paid. This phase includes direct payment links so a client can pay online from the public invoice page, automatic reconciliation on successful payment, a client portal for viewing payment history, and custom domain support for Pro users.
+
+Phase 4, Ecosystem Integration and Accounting, is planned for the future. The goal is to position Invoiceser as a central financial hub by syncing with Xero, QuickBooks, and FreshBooks, adding expense tracking alongside revenue, and connecting bank feeds via Plaid for automatic transaction matching.
+
+Phase 5, the Agency Operating System, is the long-term vision. The goal is to evolve Invoiceser from a single-player tool into a multiplayer operating system for scaling agencies, with team workspaces and role-based access control, automated recurring retainer billing, and native mobile apps.`,
+      },
+      {
+        icon: "live",
+        label: "Success Metrics",
+        content: `North Star Metric: Monthly Active Senders. The number of unique users who successfully send at least one invoice in a given month. This is the single number that represents the core value Invoiceser delivers. If it grows, the product is succeeding.
+
+Supporting KPIs, organized by funnel stage:
+
+• Activation Rate: percentage of signups who send their first invoice within 24 hours, target above 40%
+• Time-to-First-Value: average time between account creation and first invoice sent, target under 5 minutes
+• Day 1 and Day 7 retention: percentage of users who return the day after and the week after signup
+• Month 1 Retention Rate: percentage of users who return to send a second invoice, target above 30%
+• Pro Conversion Rate: percentage of active users who upgrade to Pro, target above 5%
+• Collection Success Rate: ratio of payments recorded against invoices sent, target above 75%
+• AI Engagement Rate: percentage of active users using the AI assistant at least once per session, target above 15%
+
+Every one of these metrics is mapped to a specific PostHog event with defined properties, so the measurement framework is implemented in the product, not just described in a document.`,
+      },
+      {
+        icon: "docs",
+        label: "Risk Register",
+        content: `I maintain a documented risk register covering four areas. Email deliverability, where invoice emails landing in spam would directly cause missed payments, mitigated through SPF, DKIM, and DMARC enforcement plus a PDF download fallback link. Security and privacy, where unauthorized access to financial data would be high impact, mitigated through strict Row-Level Security and encryption of sensitive data at rest. LLM hallucination, where the AI assistant could state an incorrect financial figure, mitigated by scoping the system prompt strictly to read-only data the user actually owns and adding UI disclaimers. And third-party outages across Clerk, Convex, or the SMTP provider, mitigated through graceful degradation and retry logic on background jobs.`,
       },
       {
         icon: "role",
         label: "My Role",
-        content: `I was the AI Product Manager and full-stack developer on Invoiceser. I defined the product concept, made every feature and prioritization decision, designed the system architecture, and built the entire application.
+        content: `I am the AI Product Manager and the sole developer on Invoiceser. I defined the product concept, wrote the PRD, designed the system architecture and database schema, built the AI integration, instrumented the analytics, defined the KPI framework and risk register, and built the entire application across both phases delivered so far.
 
-The key product decision was the AI assistant's positioning. An AI feature can easily feel like a gimmick if bolted on as an afterthought. I designed the assistant to be genuinely useful by giving it full access to the user's data and framing it around questions that freelancers actually ask when they are trying to understand their cash flow. The "Who owes me the most?" framing came directly from thinking about the moment a freelancer sits down on a Friday afternoon to figure out what they need to chase before the weekend. That specificity is what separates useful AI from novelty AI.
+The key product decision was the AI assistant's positioning. An AI feature can easily feel like a gimmick if it is bolted onto a product as an afterthought. I designed the assistant to be genuinely useful by giving it real, scoped access to the user's own data and framing it around questions freelancers actually ask themselves when trying to understand their cash flow. The "Who owes me the most?" framing came directly from picturing the moment a freelancer sits down on a Friday afternoon to figure out what they need to chase before the weekend. That specificity, not the model itself, is what separates useful AI from novelty AI.
 
-The second significant decision was the multi-currency wallet design. I chose to track per-currency balances without conversion rather than normalizing everything to a single currency. Forced conversion creates a false picture of the business for freelancers who think in multiple currencies. Showing real amounts in each currency is more honest and more useful.`,
+The second significant decision was building the phased roadmap and KPI framework before continuing to add features. It would have been easy to keep shipping whatever seemed useful next. Instead, I defined what success looks like at each stage, instrumented the product to measure it, and used that to decide what Phase 3 should actually contain. The roadmap is sequenced by what removes the most friction for the user first, not by what is most interesting to build.`,
       },
       {
         icon: "learnings",
         label: "Key Learnings",
-        content: `AI features need data access and a specific use case to be genuinely useful. An AI button that opens a generic chatbot is a feature. An AI assistant that knows which of your clients has owed you money for the longest time is a product. The difference is specificity of context and clarity of the use case it is solving.
+        content: `AI features need scoped data access and a specific use case to be genuinely useful. An AI button that opens a generic chatbot is a feature. An AI assistant that knows exactly which of your clients has owed you money the longest is a product. The difference is the specificity of the context and the clarity of the question it is built to answer.
 
-Real-time infrastructure changes the product design space. Building on Convex's live query subscriptions made features like instant open-notifications and real-time dashboard updates not just possible but easy. The architecture choice unlocked product decisions. Understanding the infrastructure you are building on changes the product you can imagine.
+Real-time infrastructure changes the product design space, not just the performance. Building on Convex live queries made instant notifications and a never-stale dashboard not just possible but the default behavior of the architecture. Understanding the infrastructure choice early changed what product experience I could imagine shipping.
 
-Monetization design should align incentives, not restrict functionality. Putting AI queries behind the Pro plan, rather than restricting invoice limits or client counts, was a deliberate choice. Users experience the full core product for free and hit the upgrade wall only at the point where they are actively getting value from the AI. That alignment between value experience and upgrade trigger is better product thinking than an arbitrary limit on the number of invoices.`,
+A measurement framework should exist before the roadmap does, not after. Defining the North Star Metric, the supporting KPIs, and the PostHog event schema before deciding what Phase 3 should contain meant every roadmap decision could be argued from evidence rather than instinct. Instrumenting the product is a product decision, not an engineering afterthought.`,
       },
       {
         icon: "means",
         label: "What This Means For Your Team",
-        content: `This project demonstrates that I can build AI-powered products that are useful rather than decorative. What you get is a PM who:
+        content: `This project demonstrates that I can take an AI-powered product from a blank page to a live, measured, and strategically sequenced platform without an engineering team behind me. What you get is a PM who:
 
-• Understands how to identify the specific high-value use case for an AI feature
-• Designs the data access and context that makes AI genuinely work for users
-• Monetizes AI in a way that aligns with the user's experience of value rather than restricting core functionality
-• Can ship a complete product, from architecture to deployment, as a solo builder`,
+• Designs AI features around a specific, validated user need rather than around what the model can technically do
+• Builds the analytics and measurement framework into the product itself, not as a reporting exercise after launch
+• Plans and sequences a multi-phase roadmap with clear, falsifiable goals at each stage
+• Documents risk before it becomes an incident, with a specific mitigation for each one
+• Can take full ownership of a product from architecture through to a live, paying user base, end to end`,
       },
     ],
     links: [
-      { label: "Visit Live App", url: "https://invoiceser.vercel.app/" },
+      { label: "Live Application", url: "https://invoiceser.vercel.app/" },
+      { label: "Product Requirement Document", url: "https://github.com/codeconnoisseur-channels/invoiceser/blob/main/docs/PRODUCT_REQUIREMENT_DOCUMENT.md" },
+      { label: "Architecture and System Design", url: "https://github.com/codeconnoisseur-channels/invoiceser/blob/main/docs/SYSTEM_ARCHITECTURE.md" },
     ],
   },
 };

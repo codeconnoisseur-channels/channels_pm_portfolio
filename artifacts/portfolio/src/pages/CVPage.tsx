@@ -18,9 +18,9 @@ const experience = [
     period: "April 2026 – June 2026",
     location: "Lagos, Nigeria",
     bullets: [
-      "Served as Technical PM Lead coordinating a 53-person cross-functional team (frontend, backend, DevOps, QA) to ship Open Profile from zero to live production in three weeks.",
-      "Wrote the complete PRD for four core features with user stories, acceptance criteria, edge cases, and success metrics.",
-      "Co-authored the Technical Requirements Document with the backend team, defining system architecture, 15+ API endpoints, PostgreSQL database schemas, and security requirements.",
+      "Served as Technical Product Manager Lead coordinating a 53-person cross-functional team (frontend, backend, DevOps, QA) to ship Open Profile from zero to live production in three weeks.",
+      "Wrote complete PRD spanning five core feature areas with user stories, acceptance criteria, and edge cases.",
+      "Co-authored the Technical Requirements Document with the backend team, defining system architecture, 46 API endpoints, PostgreSQL database schemas, and security requirements.",
       "Wrote all detailed implementation tickets for both the frontend and backend teams, covering expected behavior, edge cases, and acceptance criteria for every task, and managed the full sprint backlog in ClickUp.",
       "Collaborated with the QA team to conduct multiple testing rounds throughout the sprint, including UI/UX testing, functional testing, User Acceptance Testing (UAT), and regression testing, verifying feature behavior against specifications across happy paths and edge cases.",
       "Collaborated with fellow Product Managers, Design, VAs, and Data Analysts across all product workstreams.",
@@ -37,7 +37,7 @@ const experience = [
       "Designed and deployed secure RESTful APIs implementing authentication, authorization, CRUD operations, and data validation.",
       "Integrated KoraPay and Paystack payment gateways across multiple applications.",
       "Managed and optimized databases with MySQL, Sequelize, and MongoDB.",
-      "Built TraceAid as Overall Team Lead, PM, and one of two backend developers, delivering API documentation via Swagger for frontend developers.",
+      "Built TraceAid as Overall Team Lead, Product Manager, and one of two backend developers, delivering API documentation via Swagger for frontend developers.",
     ],
   },
   {
@@ -113,14 +113,14 @@ const achievements = [
   {
     title: "HNG i14 Finalist – Product Management Track",
     org: "HNG Tech",
-    period: "2026",
+    period: "June 2026",
     badges: ["10 Stages Completed", "Final 140 out of 10,000 Interns"],
   },
   {
     title: "Best in Product Management: Mentors' Choice Award",
     org: "HNG Tech",
-    period: "2026",
-    badges: ["Top 1% of 1,000+ PM Interns"],
+    period: "June 2026",
+    badges: ["Top 1% of 500+ PM Interns"],
   },
 ];
 

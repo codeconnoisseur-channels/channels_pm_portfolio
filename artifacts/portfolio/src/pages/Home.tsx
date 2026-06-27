@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import headshot from "@assets/Portfolio_shoot_1781129245216.png";
 import traceaidImg from "@assets/image_1781170985650.png";
 import openProfileImg from "@assets/image_1781171105171.png";
-import invoiceserImg from "@assets/image_1781171180415.png";
+import invoiceserImg from "@assets/invoiceser_image.jpg";
 import { Lightbulb, Code, ArrowRight, BarChart2, Database, TrendingUp, MousePointer2, PenTool, Map, FileText, Users, CalendarDays, ListChecks, Layers, Network, Search, GitBranch, FlaskConical, RefreshCw, Globe, Shield, Bug, CreditCard } from "lucide-react";
 import { SiFigma, SiJira, SiLinear, SiClickup, SiNotion, SiAsana, SiMiro, SiPostman, SiSwagger, SiGithub, SiAnthropic, SiOpenai, SiGoogle, SiN8N, SiGoogleanalytics, SiPosthog, SiConfluence, SiJavascript, SiNodedotjs, SiMongodb, SiMysql, SiPostgresql } from "react-icons/si";
 import { GlowCard } from "@/components/GlowCard";
@@ -49,24 +49,6 @@ const doubled = [...tickerItems, ...tickerItems];
 
 const projects = [
   {
-    slug:  "traceaid",
-    title: "TraceAid",
-    type:  "Crowdfunding & Accountability Platform",
-    role:  "PM & Backend Developer",
-    live:  true,
-    image: traceaidImg,
-    short: "A crowdfunding platform built around a single conviction: donors deserve to see exactly what their money accomplished before the next tranche releases.",
-  },
-  {
-    slug:  "open-profile",
-    title: "Open Profile",
-    type:  "Identity Platform",
-    role:  "Technical PM Lead",
-    live:  true,
-    image: openProfileImg,
-    short: "An identity platform for freelancers, creators, and indie builders to consolidate their professional presence into one clean, searchable URL.",
-  },
-  {
     slug:  "invoiceser",
     title: "Invoiceser",
     type:  "AI-Powered Invoicing",
@@ -74,6 +56,24 @@ const projects = [
     live:  true,
     image: invoiceserImg,
     short: "An AI-powered invoicing platform with real-time previews, automatic payment reminders, multi-currency support, and a natural language AI assistant.",
+  },
+  {
+    slug:  "open-profile",
+    title: "Open Profile",
+    type:  "Identity Platform",
+    role:  "Technical Product Manager Lead",
+    live:  true,
+    image: openProfileImg,
+    short: "An identity platform for freelancers, creators, and indie builders to consolidate their professional presence into one clean, searchable URL.",
+  },
+  {
+    slug:  "traceaid",
+    title: "TraceAid",
+    type:  "Crowdfunding & Accountability Platform",
+    role:  "Product Manager & Backend Developer",
+    live:  true,
+    image: traceaidImg,
+    short: "A crowdfunding platform built around a single conviction: donors deserve to see exactly what their money accomplished before the next tranche releases.",
   },
 ];
 

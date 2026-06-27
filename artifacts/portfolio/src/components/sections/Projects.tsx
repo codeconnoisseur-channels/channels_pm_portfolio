@@ -3,6 +3,34 @@ import { ArrowUpRightIcon, ServerIcon, UsersIcon, SparklesIcon } from "lucide-re
 
 const projects = [
   {
+    title: "Invoiceser",
+    role: "AI Product Manager",
+    type: "AI-Powered Invoicing Platform, SaaS",
+    stack: ["Next.js 14", "Convex", "Clerk", "Resend", "Groq (Llama 3 70B)", "KoraPay", "Recharts"],
+    status: "Live",
+    description: "An AI-powered invoicing platform for freelancers and small businesses, with real-time invoice previews, automatic payment reminders, multi-currency support, and an AI assistant that answers natural language questions about your financial data.",
+    problem: "",
+    decision: "AI assistant powered by Groq's Llama 3 70B that understands the user's invoice data and answers natural language questions: \"Who owes me the most right now?\", \"What was my strongest month this year?\", \"Which clients consistently pay late?\"",
+    links: [
+      { name: "Live App", url: "https://invoiceser.vercel.app/" }
+    ],
+    icon: SparklesIcon
+  },
+  {
+    title: "Open Profile",
+    role: "Technical Product Manager Lead (HNG Internship)",
+    type: "Identity Platform, Web Application",
+    stack: ["React", "Node", "Cross-functional Team (53 people)"],
+    status: "Live",
+    description: "An identity platform for freelancers, creators, and indie builders to consolidate their professional presence into one clean, searchable URL. Led it from zero to launch, coordinating 53 people across five functional streams, in three weeks.",
+    problem: "",
+    decision: "Wrote the complete PRD for four core features with user stories, acceptance criteria, edge cases, and success metrics. Co-authored the TRD with the backend lead. Designed a user flow redesign that eliminated a three-week rework cycle caused by design-engineering misalignment.",
+    links: [
+      { name: "Live App", url: "https://open-profile.hng14.com/" }
+    ],
+    icon: UsersIcon
+  },
+  {
     title: "TraceAid",
     role: "Product Manager and Backend Developer",
     type: "Crowdfunding and Accountability Platform",
@@ -16,34 +44,6 @@ const projects = [
       { name: "API Docs", url: "https://traceaid.onrender.com/docs/" }
     ],
     icon: ServerIcon
-  },
-  {
-    title: "Open Profile",
-    role: "Technical PM Lead (HNG Internship)",
-    type: "Identity Platform, Web Application",
-    stack: ["React", "Node", "Cross-functional Team (53 people)"],
-    status: "Live",
-    description: "An identity platform for freelancers, creators, and indie builders to consolidate their professional presence into one clean, searchable URL. Led it from zero to launch, coordinating 53 people across five functional streams, in three weeks.",
-    problem: "",
-    decision: "Wrote the complete PRD for four core features with user stories, acceptance criteria, edge cases, and success metrics. Co-authored the TRD with the backend lead. Designed a user flow redesign that eliminated a three-week rework cycle caused by design-engineering misalignment.",
-    links: [
-      { name: "Live App", url: "https://open-profile.hng14.com/" }
-    ],
-    icon: UsersIcon
-  },
-  {
-    title: "Invoiceser",
-    role: "AI Product Manager",
-    type: "AI-Powered Invoicing Platform, SaaS",
-    stack: ["Next.js 14", "Convex", "Clerk", "Resend", "Groq (Llama 3 70B)", "KoraPay", "Recharts"],
-    status: "Live",
-    description: "An AI-powered invoicing platform for freelancers and small businesses, with real-time invoice previews, automatic payment reminders, multi-currency support, and an AI assistant that answers natural language questions about your financial data.",
-    problem: "",
-    decision: "AI assistant powered by Groq's Llama 3 70B that understands the user's invoice data and answers natural language questions: \"Who owes me the most right now?\", \"What was my strongest month this year?\", \"Which clients consistently pay late?\"",
-    links: [
-      { name: "Live App", url: "https://invoiceser.vercel.app/" }
-    ],
-    icon: SparklesIcon
   }
 ];
 
