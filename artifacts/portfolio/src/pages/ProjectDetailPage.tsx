@@ -280,7 +280,7 @@ Three-sided platforms require three times the user thinking. Every single featur
     stats: [
       { icon: "team",  value: "53",          label: "People coordinated across 5 streams" },
       { icon: "time",  value: "3 Weeks",     label: "Discovery to live production" },
-      { icon: "api",   value: "46",         label: "API endpoints defined in TRD" },
+      { icon: "api",   value: "46",         label: "API endpoints" },
       { icon: "live",  value: "On Schedule", label: "Launched within the build window" },
     ],
     sections: [
