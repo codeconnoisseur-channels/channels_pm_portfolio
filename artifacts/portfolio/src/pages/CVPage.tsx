@@ -145,9 +145,7 @@ export default function CVPage() {
               <Mail className="w-4 h-4 text-accent shrink-0" />
               <span className="truncate">channelsokunade@gmail.com</span>
             </a>
-            <a href="tel:+2348160424398" className="flex items-center gap-2 hover:text-accent transition-colors shrink-0" data-testid="cv-phone">
-              <Phone className="w-4 h-4 text-accent shrink-0" /> +(234) 816-0424-398
-            </a>
+
             <span className="flex items-center gap-2 shrink-0">
               <MapPin className="w-4 h-4 text-accent shrink-0" /> Lagos State, Nigeria · Available Globally
             </span>

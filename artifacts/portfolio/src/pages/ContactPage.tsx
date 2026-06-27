@@ -78,16 +78,7 @@ export default function ContactPage() {
 
             {/* Direct contact links */}
             <div className="space-y-2.5">
-              <a
-                href="tel:+2348160424398"
-                className="flex items-center gap-3.5 px-5 py-3.5 bg-card border border-border-subtle hover:border-accent/40 rounded-xl group transition-colors"
-              >
-                <Phone className="w-4 h-4 text-accent shrink-0" />
-                <div>
-                  <div className="text-[11px] text-text-secondary uppercase tracking-widest mb-0.5">Phone</div>
-                  <div className="text-foreground text-sm font-medium group-hover:text-accent transition-colors">+(234) 816-0424-398</div>
-                </div>
-              </a>
+
               <a
                 href="mailto:channelsokunade@gmail.com"
                 className="flex items-center gap-3.5 px-5 py-3.5 bg-card border border-border-subtle hover:border-accent/40 rounded-xl group transition-colors"
