@@ -52,7 +52,7 @@ export function Contact() {
                   <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 text-primary">
                     <MapPinIcon className="w-5 h-5" />
                   </div>
-                  <span className="text-lg font-medium">Lagos State, Nigeria</span>
+                  <span className="text-lg font-medium">Lagos State, Nigeria (GMT+1)</span>
                 </div>
               </div>
             </motion.div>

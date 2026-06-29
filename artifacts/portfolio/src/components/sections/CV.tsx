@@ -18,9 +18,9 @@ const experience = [
   {
     role: "Product Management Intern",
     company: "BorderFlo",
-    period: "November 2024 to February 2025",
+    period: "November 2024 to March 2025",
     location: "Lagos, Nigeria",
-    description: "Diagnosed a 40% post-signup churn rate through analytics and user interviews. Proposed and shipped progressive onboarding that reduced abandonment at the verification stage. Coordinated a hybrid team of internal and specialist external engineers across the full build cycle."
+    description: "Used PostHog Analytics to diagnose a 40% post-signup churn rate due to upfront KYC requirements. Proposed and shipped progressive onboarding that cut identity-verification drop-off by 25%. Coordinated a 6-person team to build and launch MVP Android app."
   },
   {
     role: "Research and Strategy Analyst (NYSC)",
@@ -62,7 +62,7 @@ const certifications = [
 const skills = {
   product: ["Product Roadmapping and Strategy", "PRD and TRD Writing", "User Research and Interviews", "Market Research", "Design Thinking", "Sprint Planning and Facilitation", "Backlog Management", "Feature Prioritization", "RICE Framework", "MoSCoW Prioritization", "Stakeholder Management", "Competitive Analysis", "User Story Mapping", "Acceptance Criteria Definition", "Data Analysis", "A/B Testing", "Agile and Scrum"],
   technical: ["JavaScript (ES6+)", "Node.js", "Express.js", "MongoDB and Mongoose", "MySQL", "Sequelize", "PostgreSQL", "RESTful API Design", "API Testing", "Database Design", "System Architecture", "JWT Authentication", "API Documentation via Swagger", "QA Testing", "Prototyping", "Git and GitHub", "KoraPay", "Paystack"],
-  tools: ["ClickUp", "Linear", "Jira", "Notion", "Confluence", "Asana", "Miro", "Figma", "Whimsical", "Google Analytics", "PostHog Analytics", "PowerBI", "SQL", "Postman", "Swagger", "Claude Code", "Cursor", "n8n", "Gemini", "ChatGPT", "Microsoft 365", "Google Suite"]
+  tools: ["ClickUp", "Linear", "Jira", "Notion", "Confluence", "Asana", "Miro", "Figma", "Whimsical", "Mixpanel", "PostHog Analytics", "PowerBI", "SQL", "Postman", "Swagger", "Claude Code", "Cursor", "n8n", "Antigravity", "ChatGPT", "Microsoft 365", "Google Suite"]
 };
 
 export function CV() {
@@ -91,7 +91,7 @@ export function CV() {
             <div className="text-sm text-gray-600 space-y-1 text-center md:text-right">
               <p>channelsokunade@gmail.com</p>
               <p>+(234) 816-0424-398</p>
-              <p>Lagos State, Nigeria</p>
+              <p>Lagos State, Nigeria (GMT+1)</p>
               <div className="flex justify-center md:justify-end gap-3 pt-2">
                 <a href="https://linkedin.com/in/channels-oladapo-67253a187" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-primary transition-colors">LinkedIn</a>
                 <span className="text-gray-300">•</span>

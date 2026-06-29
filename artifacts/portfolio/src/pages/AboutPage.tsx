@@ -22,7 +22,7 @@ const principles = [
   },
   {
     title: "Data shows you the what. Users show you the why.",
-    body: "Metrics can tell you that something is broken. They rarely tell you why. I treat analytics and user research as two instruments that answer two different questions, and I run both. At BorderFlo, a 40% churn rate in Google Analytics pointed me to the drop-off stage. User interviews told me the real reason: the product was asking for trust before it had given any reason to extend it. If I had only looked at the data, I would have redesigned the wrong thing.",
+    body: "Metrics can tell you that something is broken. They rarely tell you why. I treat analytics and user research as two instruments that answer two different questions, and I run both. A 40% churn rate in an analytics dashboard pointed me to the drop-off stage. User interviews told me the real reason: the product was asking for trust before it had given any reason to extend it. If I had only looked at the data, I would have redesigned the wrong thing.",
   },
   {
     title: "The best product decisions happen closest to the constraints.",

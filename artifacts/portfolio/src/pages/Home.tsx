@@ -5,7 +5,7 @@ import traceaidImg from "@assets/image_1781170985650.png";
 import openProfileImg from "@assets/image_1781171105171.png";
 import invoiceserImg from "@assets/invoiceser_image.jpg";
 import { Lightbulb, Code, ArrowRight, BarChart2, Database, TrendingUp, MousePointer2, PenTool, Map, FileText, Users, CalendarDays, ListChecks, Layers, Network, Search, GitBranch, FlaskConical, RefreshCw, Globe, Shield, Bug, CreditCard } from "lucide-react";
-import { SiFigma, SiJira, SiLinear, SiClickup, SiNotion, SiAsana, SiMiro, SiPostman, SiSwagger, SiGithub, SiAnthropic, SiOpenai, SiGoogle, SiN8N, SiGoogleanalytics, SiPosthog, SiConfluence, SiJavascript, SiNodedotjs, SiMongodb, SiMysql, SiPostgresql } from "react-icons/si";
+import { SiFigma, SiJira, SiLinear, SiClickup, SiNotion, SiAsana, SiMiro, SiPostman, SiSwagger, SiGithub, SiAnthropic, SiOpenai, SiGoogle, SiN8N, SiGoogleanalytics, SiPosthog, SiConfluence, SiJavascript, SiNodedotjs, SiMongodb, SiMysql, SiPostgresql, SiMixpanel } from "react-icons/si";
 import { GlowCard } from "@/components/GlowCard";
 import { usePageTitle } from "@/hooks/use-page-title";
 
@@ -415,7 +415,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-display text-2xl">Product Skills</h3>
               </div>
-              <div className="space-y-3">
+              <div className="flex flex-wrap gap-3">
                 {[
                   { name: "Product Roadmapping & Strategy",      Icon: Map          },
                   { name: "PRD & TRD Writing",                   Icon: FileText     },
@@ -437,7 +437,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.035, duration: 0.45, ease }}
-                    className="bg-card p-4 rounded-lg border border-border-subtle flex items-center gap-4 hover:border-accent/40 transition-colors"
+                    className="bg-card px-4 py-2.5 rounded-lg border border-border-subtle inline-flex items-center gap-3 w-auto hover:border-accent/40 transition-colors"
                   >
                     <Icon className="w-4 h-4 text-accent flex-shrink-0" />
                     <span className="text-sm font-medium text-foreground">{name}</span>
@@ -459,7 +459,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-display text-2xl">Technical Skills</h3>
               </div>
-              <div className="space-y-3">
+              <div className="flex flex-wrap gap-3">
                 {[
                   { name: "JavaScript (ES6+)",               Icon: SiJavascript },
                   { name: "Node.js",                         Icon: SiNodedotjs  },
@@ -482,7 +482,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.035, duration: 0.45, ease }}
-                    className="bg-card p-4 rounded-lg border border-border-subtle flex items-center gap-4 hover:border-accent/40 transition-colors"
+                    className="bg-card px-4 py-2.5 rounded-lg border border-border-subtle inline-flex items-center gap-3 w-auto hover:border-accent/40 transition-colors"
                   >
                     <Icon className="w-4 h-4 text-accent flex-shrink-0" />
                     <span className="text-sm font-medium text-foreground">{name}</span>
@@ -515,10 +515,10 @@ export default function Home() {
                 { name: "GitHub",           icon: SiGithub,    color: "var(--foreground)" },
                 { name: "Claude",           icon: SiAnthropic, color: "#D97757" },
                 { name: "ChatGPT",          icon: SiOpenai,    color: "#10A37F" },
-                { name: "Gemini",           icon: SiGoogle,          color: "#4285F4" },
+                { name: "Antigravity",      icon: SiGoogle,          color: "#4285F4" },
                 { name: "n8n",              icon: SiN8N,             color: "#EA4B71" },
                 { name: "Power BI",         icon: TrendingUp,        color: "#F2C811" },
-                { name: "Google Analytics", icon: SiGoogleanalytics, color: "#E37400" },
+                { name: "Mixpanel",         icon: SiMixpanel,        color: "#7856FF" },
                 { name: "PostHog",          icon: SiPosthog,         color: "#C9A96E" },
                 { name: "SQL",              icon: Database,          color: "#60A5FA" },
                 { name: "Cursor",           icon: MousePointer2,     color: "var(--foreground)" },

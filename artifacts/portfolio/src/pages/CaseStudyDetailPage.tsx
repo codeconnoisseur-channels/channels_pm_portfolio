@@ -159,12 +159,12 @@ const caseStudies: Record<string, CaseStudyData> = {
     title: "BorderFlo: Activation & Onboarding",
     company: "BorderFlo",
     type: "PM Internship",
-    period: "Nov 2024 – Feb 2025",
+    period: "Nov 2024 – Mar 2025",
     hook: "Found a 40% post-signup churn rate, ran user interviews, and discovered the problem was not what the team assumed.",
     stats: [
-      { icon: "churn",   value: "40%",        label: "Post-signup churn rate (Google Analytics)" },
+      { icon: "churn",   value: "40%",        label: "Post-signup churn rate (PostHog Analytics)" },
       { icon: "insight", value: "Sequencing", label: "Root cause: commitment before value" },
-      { icon: "result",  value: "Reduced",    label: "Abandonment at verification stage" },
+      { icon: "result",  value: "25%",    label: "Reduction in identity-verification drop-off" },
     ],
     sections: [
       {
@@ -177,7 +177,7 @@ I joined as a Product Management Intern as the team was building toward the MVP 
       {
         icon: "challenge",
         label: "The Challenge",
-        content: `The team had observed that users were signing up but not completing the onboarding process. Using Google Analytics, I traced the user journey from signup through each onboarding step and identified where volume was dropping off. The data showed a 40% churn rate, concentrated at one specific step: identity verification.
+        content: `The team had observed that users were signing up but not completing the onboarding process. Using PostHog Analytics, I traced the user journey from signup through each onboarding step and identified where volume was dropping off. The data showed a 40% churn rate, concentrated at one specific step: identity verification (upfront KYC/NIN verification).
 
 My first instinct (and the instinct of most product teams in this situation) would have been to optimize the verification step itself. Simplify the UI, improve the copy, add tooltips. But I ran user interviews before drawing that conclusion, because the data could only tell me where the problem was. It could not tell me why.`,
       },
@@ -191,15 +191,13 @@ The implication was significant. The team had a sequencing problem, not a commun
       {
         icon: "decisions",
         label: "Key Decisions",
-        content: `I proposed two activation features based on this diagnosis.
-
-The first was progressive onboarding. The recommendation was to restructure the experience so users could explore the product, see their funding options, and understand what the wallet could do for them before being required to complete identity verification. The goal was to reverse the order of commitment and value: let the user see the value first, and then ask for the effort. Build commitment before demanding trust.
+        content: `The first was progressive onboarding. The recommendation was to restructure the experience so users could explore the product, see their funding options, and understand what the wallet could do for them before being required to complete identity verification. The goal was to reverse the order of commitment and value: let the user see the value first, and then ask for the effort. Build commitment before demanding trust.
 
 The second was event-triggered nudges. Rather than generic time-based emails sent to all inactive users, I recommended behavioral prompts triggered by specific in-app actions. A user who had started verification but not completed it would receive a different message from one who had not started at all.
 
-The decision to frame this as a sequencing problem rather than a UX problem was the most important call I made. It meant the solution required restructuring the onboarding flow rather than polishing it. That is a larger and more complex change to recommend. But it was the right diagnosis.
+The results validated the diagnosis. Progressive onboarding was shipped, cutting identity-verification drop-off by 25%.
 
-Progressive onboarding was implemented and shipped. It reduced abandonment at the verification stage.`,
+My work on BorderFlo affirmed a core product principle: data shows you what is happening, but users show you why. Treating them as separate sources of truth is risky; combining them is how you find the real problem.`,
       },
       {
         icon: "demonstrates",

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Github, Award, BarChart2, Code, Lightbulb, Database, TrendingUp, MousePointer2, PenTool, Download } from "lucide-react";
-import { SiFigma, SiJira, SiLinear, SiClickup, SiNotion, SiAsana, SiMiro, SiPostman, SiSwagger, SiGithub, SiAnthropic, SiOpenai, SiGoogle, SiN8N, SiGoogleanalytics, SiPosthog, SiConfluence } from "react-icons/si";
+import { SiFigma, SiJira, SiLinear, SiClickup, SiNotion, SiAsana, SiMiro, SiPostman, SiSwagger, SiGithub, SiAnthropic, SiOpenai, SiGoogle, SiN8N, SiGoogleanalytics, SiPosthog, SiConfluence, SiMixpanel } from "react-icons/si";
 import { GlowCard } from "@/components/GlowCard";
 
 const ease = [0.22, 1, 0.36, 1] as [number, number, number, number];
@@ -18,39 +18,35 @@ const experience = [
     period: "April 2026 – June 2026",
     location: "Lagos, Nigeria",
     bullets: [
-      "Served as Technical Product Manager Lead coordinating a 53-person cross-functional team (frontend, backend, DevOps, QA) to ship Open Profile from zero to live production in three weeks.",
-      "Wrote complete PRD spanning five core feature areas with user stories, acceptance criteria, and edge cases.",
-      "Co-authored the Technical Requirements Document with the backend team, defining system architecture, 46 API endpoints, PostgreSQL database schemas, and security requirements.",
-      "Wrote all detailed implementation tickets for both the frontend and backend teams, covering expected behavior, edge cases, and acceptance criteria for every task, and managed the full sprint backlog in ClickUp.",
-      "Collaborated with the QA team to conduct multiple testing rounds throughout the sprint, including UI/UX testing, functional testing, User Acceptance Testing (UAT), and regression testing, verifying feature behavior against specifications across happy paths and edge cases.",
-      "Collaborated with fellow Product Managers, Design, VAs, and Data Analysts across all product workstreams.",
-      "Partnered with Marketing on the GTM strategy, leveraging a waitlist, beta group, founder-led outreach, community channels, and existing social media platforms.",
-      "Designed user flows that eliminated a three-week rework cycle caused by design-engineering misalignment.",
+      "Led a 53-person cross-functional team (frontend, backend, DevOps, QA, Design, and Marketing) as Technical PM Lead, shipping Open Profile from zero to live production in 3 weeks.",
+      "Authored the complete PRD for 4 core features, defining user stories, acceptance criteria, edge cases, and success metrics that aligned the 53-person team before development began.",
+      "Co-authored the TRD with the backend team, defining system architecture, 46 API endpoints, PostgreSQL database schemas, and security requirements.",
+      "Wrote and managed every implementation ticket (expected behaviour, edge cases, acceptance criteria) for the frontend and backend teams in ClickUp throughout the 3-week sprint.",
+      "Collaborated with QA across UI/UX, functional, UAT, and regression testing cycles, surfacing and triaging 37 bugs (21 functional, 11 UI/UX, 5 validation) against the spec before launch.",
+      "Partnered with Marketing on a GTM strategy targeting 150–250 waitlist signups, 25–30 active beta testers, and 100+ activated users by the end of launch week, combining founder-led outreach, community channels, and social media.",
+      "Designed user flows that closed a design-engineering alignment gap, eliminating a 3-week rework cycle.",
     ],
   },
   {
     company: "The Curve Africa",
     role: "Backend Development Trainee",
-    period: "May 2025 – November 2025",
+    period: "May 2025 – December 2025",
     location: "Lagos, Nigeria",
     bullets: [
-      "Designed and deployed secure RESTful APIs implementing authentication, authorization, CRUD operations, and data validation.",
-      "Integrated KoraPay and Paystack payment gateways across multiple applications.",
-      "Managed and optimized databases with MySQL, Sequelize, and MongoDB.",
-      "Built TraceAid as Overall Team Lead, Product Manager, and one of two backend developers, delivering API documentation via Swagger for frontend developers.",
+      "Designed and deployed secure RESTful APIs across 5 backend projects, featuring authentication, authorization, CRUD operations, data validation, payment gateways, and security requirements.",
+      "Managed and optimized 3 databases and ORMs (MySQL, Sequelize, MongoDB) supporting these projects.",
+      "Led a 6-person team (2 backend, 2 frontend, 2 product designers) as Team Lead, PM, and backend developer to build TraceAid, documenting 86 API endpoints via Swagger for frontend integration.",
     ],
   },
   {
     company: "BorderFlo",
     role: "Product Management Intern",
-    period: "November 2024 – February 2025",
+    period: "November 2024 – March 2025",
     location: "Lagos, Nigeria",
     bullets: [
-      "Collaborated with a 6-person cross-functional team to build and launch BorderFlo's MVP Android app in January 2025.",
-      "Ran user interviews and iterated on PRDs for onboarding and wallet funding, reducing identity verification drop-off.",
-      "Used Google Analytics to identify a 40% post-signup churn rate, diagnosed the root cause as a sequencing problem, and proposed and shipped progressive onboarding that reduced abandonment at the verification stage.",
-      "Coordinated a hybrid team of internal and specialist external engineers across competing priorities and timelines.",
-      "Facilitated sprint planning and backlog grooming in ClickUp.",
+      "Coordinated a 6-person team (1 product designer, 2 frontend and mobile, 2 backend, 1 QA) to build and launch BorderFlo’s MVP Android app in January 2025, cutting build time from 8 to 6 weeks (25% faster).",
+      "Used PostHog Analytics to diagnose a 40% post-signup churn rate due to upfront KYC requirements (NIN verification), then proposed and shipped progressive (tiered) onboarding that cut identity-verification drop-off by 25%.",
+      "Ran 10 user interviews and iterated on PRDs for onboarding and wallet funding, surfacing upfront KYC as the core friction point in the onboarding flow.",
     ],
   },
   {
@@ -59,8 +55,9 @@ const experience = [
     period: "December 2023 – October 2024",
     location: "Lagos, Nigeria",
     bullets: [
-      "Conducted in-depth market research and competitive analysis for SMEs across FMCG, consulting, real estate, and technology sectors.",
-      "Prepared strategic reports that improved client go-to-market execution and expansion plans.",
+      "Led market intelligence and competitive benchmarking for 30+ SMEs across sectors, including FMCG, Tech, Real Estate, and Professional Services, diagnosing root causes for declining market share and identifying new revenue streams.",
+      "Designed and executed 50+ mixed-method research projects (qualitative interviews, quantitative surveys, and secondary desk research) to extract actionable consumer and market insights.",
+      "Synthesized complex data to inform turnaround strategies, business restructuring, or operational optimizations.",
     ],
   },
 ];
@@ -92,10 +89,10 @@ const tools: { name: string; icon: React.ElementType; color: string }[] = [
   { name: "GitHub",           icon: SiGithub,    color: "var(--foreground)" },
   { name: "Claude",           icon: SiAnthropic, color: "#D97757" },
   { name: "ChatGPT",          icon: SiOpenai,    color: "#10A37F" },
-  { name: "Gemini",           icon: SiGoogle,          color: "#4285F4" },
+  { name: "Antigravity",      icon: SiGoogle,          color: "#4285F4" },
   { name: "n8n",              icon: SiN8N,             color: "#EA4B71" },
   { name: "Power BI",         icon: TrendingUp,        color: "#F2C811" },
-  { name: "Google Analytics", icon: SiGoogleanalytics, color: "#E37400" },
+  { name: "Mixpanel",         icon: SiMixpanel,        color: "#7856FF" },
   { name: "PostHog",          icon: SiPosthog,         color: "#C9A96E" },
   { name: "SQL",              icon: Database,          color: "#60A5FA" },
   { name: "Cursor",           icon: MousePointer2,     color: "var(--foreground)" },
@@ -147,7 +144,7 @@ export default function CVPage() {
             </a>
 
             <span className="flex items-center gap-2 shrink-0">
-              <MapPin className="w-4 h-4 text-accent shrink-0" /> Lagos State, Nigeria · Available Globally
+              <MapPin className="w-4 h-4 text-accent shrink-0" /> Lagos State, Nigeria (GMT+1) · Available Globally
             </span>
             <a href="https://www.linkedin.com/in/channels-oladapo-67253a187/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-accent transition-colors min-w-0" data-testid="cv-linkedin">
               <Linkedin className="w-4 h-4 text-accent shrink-0" />
@@ -159,9 +156,8 @@ export default function CVPage() {
             </a>
           </div>
           <motion.a
-            href="https://drive.google.com/file/d/1E7fV6tcybksFxlgcvka4W8ly-UaoHfAa/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/Channels_Oladapo_PM_CV.pdf"
+            download="Channels_Oladapo_PM_CV.pdf"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-background rounded-full font-semibold text-sm hover:bg-accent/90 transition-colors"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
@@ -183,7 +179,7 @@ export default function CVPage() {
         >
           <h2 className="font-display text-2xl text-foreground mb-5">Professional Summary</h2>
           <p className="text-text-secondary leading-relaxed text-lg">
-            Technical Product Manager with hands-on backend engineering experience in Node.js, Express, MongoDB, and PostgreSQL. Builds end-to-end: from user research, PRD and TRD writing, and acceptance criteria through to API design, prototyping, and GTM coordination. Bridges the gap between product thinking and engineering execution. When there is a problem to solve, the answer is not just a document, it is a working prototype. Currently focused on building AI-powered products at the intersection of LLMs, AI Agents, and automation.
+            Product Manager with hands-on backend engineering experience using Node.js, Express.js, MongoDB, and PostgreSQL. Builds end-to-end: from user research, PRD and TRD writing, writing tickets and acceptance criteria through to API design, prototyping, and GTM coordination. When there is a problem to solve, the answer is a working prototype, not just a document. Currently building AI-powered products at the intersection of LLMs, AI Agents, and automation. Seeking an Associate Technical Product Manager role.
           </p>
         </motion.section>
 
