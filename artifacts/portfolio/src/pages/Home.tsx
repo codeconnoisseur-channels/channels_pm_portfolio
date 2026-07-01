@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import headshot from "@assets/Portfolio_shoot_1781129245216.png";
 import traceaidImg from "@assets/image_1781170985650.png";
 import openProfileImg from "@assets/image_1781171105171.png";
-import invoiceserImg from "@assets/invoiceser_image.jpg";
+import invoiceserImg from "@assets/invoiceser.jpg";
 import { Lightbulb, Code, ArrowRight, BarChart2, Database, TrendingUp, MousePointer2, PenTool, Map, FileText, Users, CalendarDays, ListChecks, Layers, Network, Search, GitBranch, FlaskConical, RefreshCw, Globe, Shield, Bug, CreditCard } from "lucide-react";
 import { SiFigma, SiJira, SiLinear, SiClickup, SiNotion, SiAsana, SiMiro, SiPostman, SiSwagger, SiGithub, SiAnthropic, SiOpenai, SiGoogle, SiN8N, SiGoogleanalytics, SiPosthog, SiConfluence, SiJavascript, SiNodedotjs, SiMongodb, SiMysql, SiPostgresql, SiMixpanel } from "react-icons/si";
 import { GlowCard } from "@/components/GlowCard";

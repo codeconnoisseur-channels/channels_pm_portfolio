@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { ExternalLink, FileText, Target, Lightbulb, Zap, BookOpen, Users } from "lucide-react";
 import traceaidImg from "@assets/image_1781170985650.png";
 import openProfileImg from "@assets/image_1781171105171.png";
-import invoiceserImg from "@assets/invoiceser_image.jpg";
+import invoiceserImg from "@assets/invoiceser.jpg";
 
 function useCountUp(end: number, active: boolean, duration = 1300) {
   const [val, setVal] = useState(0);

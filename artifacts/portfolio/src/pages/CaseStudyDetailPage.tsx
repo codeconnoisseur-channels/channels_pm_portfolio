@@ -1,5 +1,5 @@
 import { useParams, Link } from "wouter";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, ReactNode } from "react";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { motion, useInView } from "framer-motion";
 import { ExternalLink, FileText, Target, Lightbulb, Zap, BookOpen, BarChart2 } from "lucide-react";
@@ -93,7 +93,7 @@ function renderContent(content: string) {
   }).filter(Boolean);
 }
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Record<string, ReactNode> = {
   churn:       <BarChart2 className="w-4 h-4 text-accent" />,
   insight:     <Lightbulb className="w-4 h-4 text-accent" />,
   launch:      <Zap className="w-4 h-4 text-accent" />,
@@ -131,7 +131,7 @@ const iconMap: Record<string, JSX.Element> = {
   spotter:     <BookOpen className="w-4 h-4 text-accent" />,
 };
 
-const sectionIcons: Record<string, JSX.Element> = {
+const sectionIcons: Record<string, ReactNode> = {
   context:      <BookOpen className="w-4 h-4 text-accent" />,
   challenge:    <Target className="w-4 h-4 text-accent" />,
   approach:     <Lightbulb className="w-4 h-4 text-accent" />,

@@ -7,7 +7,7 @@ import { usePageTitle } from "@/hooks/use-page-title";
 const ease = [0.22, 1, 0.36, 1] as [number, number, number, number];
 import traceaidImg from "@assets/image_1781170985650.png";
 import openProfileImg from "@assets/image_1781171105171.png";
-import invoiceserImg from "@assets/invoiceser_image.jpg";
+import invoiceserImg from "@assets/invoiceser.jpg";
 
 const projects = [
   {
