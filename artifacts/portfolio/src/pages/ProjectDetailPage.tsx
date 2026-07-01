@@ -379,11 +379,11 @@ The GTM is part of the product. A product is not ready when the last bug is fixe
     subtitle: "AI-Powered Invoicing and Financial Intelligence Platform",
     role: "AI Product Manager and Full-Stack Developer",
     type: "AI-Powered Invoicing and Financial Intelligence Platform, SaaS",
-    stack: "Next.js 14, Convex (real-time serverless backend), Clerk, Nodemailer (SMTP), Groq (Llama 3 70B), KoraPay, PostHog, Recharts",
+    stack: "Next.js 14, Convex (real-time serverless backend), Clerk, Nodemailer (SMTP), gpt-oss-120b (via Groq), KoraPay, PostHog, Recharts",
     status: "Live, in active development",
     image: invoiceserImg,
     stats: [
-      { icon: "ai",       value: "AI Powered",    label: "Groq Llama 3 70B financial assistant" },
+      { icon: "ai",       value: "AI Powered",    label: "gpt-oss-120b financial assistant (served by Groq)" },
       { icon: "currency", value: "Multi-Currency", label: "Per-currency earnings wallet" },
       { icon: "reminder", value: "Auto Reminders", label: "Scheduled payment nudges" },
       { icon: "notify",   value: "Real-time",      label: "In-app notifications on client actions" },
@@ -406,7 +406,7 @@ Invoiceser was built to remove all four problems by consolidating the full invoi
       {
         icon: "features",
         label: "The Solution",
-        content: `The product centers on four commitments. Invoices that are genuinely beautiful and customizable, so they build trust and reinforce the sender's brand rather than undermine it. Automated payment reminders, so a user never has to manually chase a client unless they choose to. A real-time dashboard and wallet that instantly reflects what has been collected and what is still outstanding. And a Groq-powered AI assistant that can answer plain-English questions about cash flow, revenue, and clients on demand.`,
+        content: `The product centers on four commitments. Invoices that are genuinely beautiful and customizable, so they build trust and reinforce the sender's brand rather than undermine it. Automated payment reminders, so a user never has to manually chase a client unless they choose to. A real-time dashboard and wallet that instantly reflects what has been collected and what is still outstanding. And a gpt-oss-120b-powered AI assistant that can answer plain-English questions about cash flow, revenue, and clients on demand.`,
       },
       {
         icon: "features",
@@ -429,7 +429,7 @@ Users configure a reminder schedule per invoice, specifying how many days before
 
 ## The AI Assistant
 
-The AI assistant is powered by Groq's Llama 3 70B model and is built on a context injection architecture rather than a generic chatbot wrapper. When a user submits a question, Convex retrieves that user's clients, invoices, and settings, serializes the relevant data into a strict, read-only system prompt, and only then sends it to the model. The assistant answers from the user's actual data: "Who owes me the most right now?", "What was my strongest month this year?", "Which clients consistently pay late?" The free plan includes ten AI queries per month. The Pro plan includes unlimited queries, which puts the most clearly valuable feature behind the upgrade rather than restricting basic invoicing functionality.
+The AI assistant is powered by the gpt-oss-120b model (served via Groq for ultra-low latency) and is built on a context injection architecture rather than a generic chatbot wrapper. When a user submits a question, Convex retrieves that user's clients, invoices, and settings, serializes the relevant data into a strict, read-only system prompt, and only then sends it to the model. The assistant answers from the user's actual data: "Who owes me the most right now?", "What was my strongest month this year?", "Which clients consistently pay late?" The free plan includes ten AI queries per month. The Pro plan includes unlimited queries, which puts the most clearly valuable feature behind the upgrade rather than restricting basic invoicing functionality.
 
 ## Real-Time Notifications and Dashboard
 

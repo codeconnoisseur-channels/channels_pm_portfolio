@@ -6,11 +6,11 @@ const projects = [
     title: "Invoiceser",
     role: "AI Product Manager",
     type: "AI-Powered Invoicing Platform, SaaS",
-    stack: ["Next.js 14", "Convex", "Clerk", "Resend", "Groq (Llama 3 70B)", "KoraPay", "Recharts"],
+    stack: ["Next.js 14", "Convex", "Clerk", "Resend", "gpt-oss-120b (via Groq)", "KoraPay", "Recharts"],
     status: "Live",
     description: "An AI-powered invoicing platform for freelancers and small businesses, with real-time invoice previews, automatic payment reminders, multi-currency support, and an AI assistant that answers natural language questions about your financial data.",
     problem: "",
-    decision: "AI assistant powered by Groq's Llama 3 70B that understands the user's invoice data and answers natural language questions: \"Who owes me the most right now?\", \"What was my strongest month this year?\", \"Which clients consistently pay late?\"",
+    decision: "AI assistant powered by gpt-oss-120b (via Groq) that understands the user's invoice data and answers natural language questions: \"Who owes me the most right now?\", \"What was my strongest month this year?\", \"Which clients consistently pay late?\"",
     links: [
       { name: "Live App", url: "https://invoiceser.vercel.app/" }
     ],
