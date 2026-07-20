@@ -156,8 +156,8 @@ export default function CVPage() {
             </a>
           </div>
           <motion.a
-            href="/Channels_Oladapo_PM_CV.pdf"
-            download="Channels_Oladapo_PM_CV.pdf"
+            href="/Channels_Oladapo_CV.pdf"
+            download="Channels_Oladapo_CV.pdf"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-background rounded-full font-semibold text-sm hover:bg-accent/90 transition-colors"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
